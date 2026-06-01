@@ -52,4 +52,10 @@
     "webpack": "^5.107.1",
     "webpack-cli": "^5.0.1"
   }
+  ,"pnpm": {
+    "overrides": {
+      "@salla.sa/ui-google-map-render": "npm:empty-npm-package@1.0.0",
+      "@salla.sa/ui-address-autocomplete-widget": "npm:empty-npm-package@1.0.0"
+    }
+  }
 }

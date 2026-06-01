@@ -99,6 +99,84 @@
   {{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
   {{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
   ">
+  <!-- ==========================================
+     TAJ ALAMEERA - GOLD TICKER
+     ========================================== -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+    
+    .taj-ticker-wrap {
+        position: fixed; top: 0; left: 0; width: 100%; height: 46px;
+        background: #F9F7F2;
+        display: flex; align-items: center; overflow: hidden;
+        z-index: 999999;
+        border-bottom: 1px solid #E6E8EB;
+        direction: ltr;
+    }
+    body { padding-top: 46px !important; }
+
+    .taj-track {
+        display: flex; width: max-content;
+        animation: tajScroll 45s linear infinite;
+    }
+    .taj-ticker-wrap:hover .taj-track { animation-play-state: paused; }
+    @keyframes tajScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    .taj-group { display: flex; align-items: center; }
+    .taj-item {
+        display: flex; align-items: center; flex-direction: row-reverse;
+        gap: 12px; padding: 0 35px;
+        font-family: 'Almarai', sans-serif; font-size: 14px; color: #1D2939; white-space: nowrap;
+    }
+    .taj-item strong { font-weight: 800; font-size: 16px; direction: ltr; display: flex; align-items: center; }
+    .taj-label { color: #C5A059; font-weight: 700; } 
+    .up { color: #2D8A39; } 
+    
+    .taj-pulse {
+        display: inline-block; width: 8px; height: 8px;
+        background-color: #C5A059; border-radius: 50%; position: relative;
+    }
+    .taj-pulse::after {
+        content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+        border-radius: 50%; border: 1px solid #C5A059; animation: pulseRing 2s infinite;
+    }
+    @keyframes pulseRing {
+        0% { transform: scale(0.5); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: scale(1.5); opacity: 0; }
+    }
+</style>
+
+<div class="taj-ticker-wrap">
+    <div class="taj-track">
+        <!-- Twig Loop for Endless Scrolling -->
+        {% for i in 1..4 %}
+        <div class="taj-group">
+            <div class="taj-item">
+                <span class="taj-pulse"></span>
+                <span class="taj-label">ذهب عيار 24</span>
+                <strong class="up">
+                    SAR 310.50 ▲
+                </strong>
+            </div>
+            <div class="taj-item">
+                <span class="taj-pulse"></span>
+                <span class="taj-label">ذهب عيار 21</span>
+                <strong class="up">
+                    SAR 271.68 ▲
+                </strong>
+            </div>
+            <div class="taj-item">
+                <span class="taj-pulse"></span>
+                <span class="taj-label">ذهب عيار 18</span>
+                <strong class="up">
+                    SAR 232.87 ▲
+                </strong>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 <noscript>
     To get full functionality of this site you need to enable JavaScript. Here is how
     <a href="https://www.enable-javascript.com/" rel="noreferrer"
