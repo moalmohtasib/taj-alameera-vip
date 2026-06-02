@@ -1,0 +1,85 @@
+/* ==========================================================================
+   TAJ ALAMEERA - GLOBAL BRAND STYLES & GOLD TICKER (Light Luxury)
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+   :root {
+       --brand-gold: #C5A059;
+       --brand-dark: #0B0B0B;
+       --text-main: #1d2939;
+       --text-light: #ffffff;
+       --border-hex: #E6E8EB;
+       --soft-cream: #F9F7F2;
+       --apple-gray: #E6E8EB;
+       --text-muted: #667085;
+   }
+   
+   body {
+       font-family: 'Almarai', sans-serif !important;
+   }
+   
+   /* --- GOLD TICKER CORE LAYOUT --- */
+   .has-taj-ticker {
+       padding-top: 46px !important;
+   }
+   
+   .taj-ticker-wrap {
+       position: fixed; top: 0; left: 0; width: 100%; height: 46px;
+       background: var(--soft-cream);
+       display: flex; align-items: center; overflow: hidden;
+       z-index: 999999;
+       border-bottom: 1px solid var(--border-hex);
+       direction: ltr;
+   }
+   
+   /* --- TICKER ANIMATION --- */
+   .taj-track {
+       display: flex; width: max-content;
+       animation: tajScroll 45s linear infinite;
+   }
+   .taj-ticker-wrap:hover .taj-track { animation-play-state: paused; }
+   @keyframes tajScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+   
+   .taj-group { display: flex; align-items: center; }
+   .taj-item {
+       display: flex; align-items: center; flex-direction: row-reverse;
+       gap: 12px; padding: 0 35px;
+       font-family: 'Almarai', sans-serif; font-size: 14px; color: var(--text-main); white-space: nowrap;
+   }
+   .taj-item strong { font-weight: 800; font-size: 16px; direction: ltr; display: flex; align-items: center; }
+   
+   .taj-sar-icon {
+       display: inline-block; width: 16px; height: 16px; margin-right: 8px;
+       background-color: currentColor; 
+       -webkit-mask-size: contain; mask-size: contain;
+       -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+       -webkit-mask-position: center; mask-position: center;
+   }
+   .taj-label { color: var(--brand-gold); font-weight: 700; } 
+   .up { color: #2D8A39; } .down { color: #D93025; }
+   
+   .taj-pulse {
+       display: inline-block; width: 8px; height: 8px;
+       background-color: var(--brand-gold); border-radius: 50%; position: relative;
+   }
+   .taj-pulse::after {
+       content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+       border-radius: 50%; border: 1px solid var(--brand-gold); animation: pulseRing 2s infinite;
+   }
+   @keyframes pulseRing {
+       0% { transform: scale(0.5); opacity: 0; }
+       50% { opacity: 1; }
+       100% { transform: scale(1.5); opacity: 0; }
+   }
+   .taj-time {
+       font-size: 12px; opacity: 0.6; color: var(--text-muted);
+       border-left: 1px solid var(--border-hex); padding-left: 15px; margin-left: 10px;
+   }
+   
+   /* --- MOBILE RESPONSIVE --- */
+   @media (max-width: 768px) {
+       .taj-ticker-wrap { height: 40px; }
+       .has-taj-ticker { padding-top: 40px !important; }
+       .taj-item { padding: 0 15px; font-size: 12px; }
+   }

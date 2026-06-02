@@ -4,6 +4,9 @@ import Anime from './partials/anime';
 import initTootTip from './partials/tooltip';
 import AppHelpers from "./app-helpers";
 
+// TAJ ALAMEERA INJECTIONS
+import './taj-gold-ticker';
+
 class App extends AppHelpers {
   constructor() {
     super();

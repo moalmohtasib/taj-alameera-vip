@@ -8,7 +8,6 @@
     "url": "git+https://github.com/SallaApp/theme-raed.git"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
     "production": "webpack --mode production",
     "prod": "webpack --mode production",
@@ -51,5 +50,9 @@
     "tailwindcss": "^3.4.19",
     "webpack": "^5.107.1",
     "webpack-cli": "^5.0.1"
+  },
+  "overrides": {
+    "@salla.sa/ui-google-map-render": "npm:empty-npm-package@^1.0.0",
+    "@salla.sa/ui-address-autocomplete-widget": "npm:empty-npm-package@^1.0.0"
   }
 }
