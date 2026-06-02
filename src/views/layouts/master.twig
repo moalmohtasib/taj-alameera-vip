@@ -66,7 +66,6 @@
 
     {% block head_scripts %}{% endblock %}
 
-
     <script data-cfasync="false">
         window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
         window.imageZoom = "{{theme.settings.get('imageZoom')}}"
@@ -78,6 +77,11 @@
     {% hook 'head:start' %}
     {% hook head %}
     {% block styles %}{% endblock %}
+    
+    {# --- TAJ ALAMEERA INJECTIONS --- #}
+    <!-- FontAwesome for Custom WordPress Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="{{ 'app.css' | asset }}">
     <link rel="stylesheet" href="{{ theme.font.path|cdn }}"/>
     <link rel="stylesheet" href="{{ 'fonts/sallaicons.css'|cdn }}"/>
@@ -94,7 +98,9 @@
     {# tracking services, custom css feature. #}
     {% hook 'head:end' %}
 </head>
-<body id="app" class="theme-raed overflow-x-hidden {% hook 'body:classes' %}
+
+{# Added .has-taj-ticker to ensure Salla header drops below ticker #}
+<body id="app" class="theme-raed has-taj-ticker overflow-x-hidden {% hook 'body:classes' %}
   {{ theme.settings.get('footer_is_dark') ? ' footer-is-dark' : ' footer-is-light' }}
   {{ theme.settings.get('topnav_is_dark') ? ' topnav-is-dark' : '' }}
   {{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
@@ -107,9 +113,12 @@
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
+    
+    {# We leave Salla's main content routing strictly intact #}
     <main id="main-content" role="main"{{ (page.slug == 'product.single' or page.slug starts with 'product.index') ? ' class="flex flex-col space-y-8 sm:space-y-16"' : '' }}>
     {% block content %}{% endblock %}
     </main>
+    
     {% component 'footer.footer' %}
 </div>
 {% hook 'body:end' %}
