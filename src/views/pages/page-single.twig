@@ -9,21 +9,76 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    <div class="container">
+    
+    {# ==========================================================================
+       TAJ ALAMEERA - CUSTOM PAGE ROUTING ENGINE
+       ========================================================================== #}
+    
+    {# 1. Privacy Policy #}
+    {% if page.slug == 'سياسة-الخصوصية' or page.slug == 'privacy-policy' %}
+        {% include 'pages.custom.privacy' %}
+        
+    {# 2. Terms and Conditions #}
+    {% elseif page.slug == 'اتفاقية-الاستخدام-والسياسات' or page.slug == 'terms' %}
+        {% include 'pages.custom.terms' %}
+        
+    {# 3. Return Policy #}
+    {% elseif page.slug == 'سياسة-الاستبدال-والاسترجاع' or page.slug == 'return-policy' %}
+        {% include 'pages.custom.policy' %}
+        
+    {# 4. Fatwa #}
+    {% elseif page.slug == 'حكم-شراء-الذهب-أون-لاين' or page.slug == 'fatwa' %}
+        {% include 'pages.custom.fatwa' %}
+        
+    {# 5. Contact Us #}
+    {% elseif page.slug == 'تواصل-معنا' or page.slug == 'contact-us' %}
+        {% include 'pages.custom.contact' %}
+        
+    {# 6. Track Order #}
+    {% elseif page.slug == 'تتبع-طلبك' or page.slug == 'track-order' %}
+        {% include 'pages.custom.track' %}
+        
+    {# 7. FAQ #}
+    {% elseif page.slug == 'الأسئلة-الشائعة' or page.slug == 'faq' %}
+        {% include 'pages.custom.faq' %}
+        
+    {# 8. Size Guide #}
+    {% elseif page.slug == 'دليل-مقاسات-الخواتم' or page.slug == 'size-guide' %}
+        {% include 'pages.custom.size-guide' %}
+        
+    {# 9. Jewelry Care #}
+    {% elseif page.slug == 'العناية-بالمجوهرات' or page.slug == 'jewelry-care' %}
+        {% include 'pages.custom.care' %}
+        
+    {# 10. About Us #}
+    {% elseif page.slug == 'من-نحن' or page.slug == 'about-us' %}
+        {% include 'pages.custom.about' %}
+        
+    {# 11. Why Us #}
+    {% elseif page.slug == 'لماذا-تاج-الأميرة' or page.slug == 'why-us' %}
+        {% include 'pages.custom.why-us' %}
+        
+    {# ==========================================================================
+       NATIVE SALLA FALLBACK (For standard text pages)
+       ========================================================================== #}
+    {% else %}
+        
+        <div class="container">
+            <nav class="breadcrumbs w-full py-5">
+                <salla-breadcrumb></salla-breadcrumb>
+            </nav>
 
-        {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
-        <nav class="breadcrumbs w-full py-5">
-            <salla-breadcrumb></salla-breadcrumb>
-        </nav>
-
-        <div class="flex justify-center">
-            <div class="content content--single-page w-full lg:w-10/12 bg-white rounded p-6 lg:p-8 mt-4 lg:mt-12">
-                <h1 class="font-bold text-2xl mb-6">{{ page.title }}</h1>
-                <div class="content-entry">
-                    {{ page.content|raw }}
+            <div class="flex justify-center">
+                <div class="content content--single-page w-full lg:w-10/12 bg-white rounded p-6 lg:p-8 mt-4 lg:mt-12 shadow-sm border border-gray-100">
+                    <h1 class="font-bold text-2xl mb-6" style="color: var(--brand-gold);">{{ page.title }}</h1>
+                    <div class="content-entry" style="line-height: 1.8; color: var(--text-muted);">
+                        {{ page.content|raw }}
+                    </div>
+                    <salla-comments item-id="{{page.id}}" type="page"></salla-comments>
                 </div>
-                <salla-comments item-id="{{page.id}}" type="page"></salla-comments>
             </div>
         </div>
-    </div>
+        
+    {% endif %}
+
 {% endblock %}

@@ -1,0 +1,125 @@
+<div class="taj-terms-wrapper">
+    
+    <div class="terms-hero">
+        <div class="terms-hero-overlay"></div>
+        
+        <div class="terms-hero-content animate-up">
+            <span class="royal-badge-pill">سياسات الاستخدام</span>
+            <h1 class="terms-title">اتفاقية الاستخدام <br> والخصوصية</h1>
+            <div class="gold-separator-luxury"></div>
+        </div>
+    </div>
+
+    <div class="terms-section intro-section">
+        <div class="intro-content animate-fade">
+            <h2 class="section-title-luxury">مرحباً بكم في تاج الأميرة</h2>
+            <p class="lead-text-luxury">
+                تحدد هذه الشروط والأحكام القواعد واللوائح الخاصة باستخدام موقع مؤسسة مجوهرات تاج الأميرة. 
+                إن دخولكم للموقع يعني موافقتكم الضمنية على هذه السياسات التي تضمن حقوقكم وحقوق المؤسسة.
+            </p>
+        </div>
+    </div>
+
+    <div class="terms-section details-section">
+        <div class="terms-grid-luxury">
+            
+            <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3>الأسعار والمدفوعات</h3>
+                <p>جميع الأسعار المعروضة تشمل ضريبة القيمة المضافة (15%). يتم تثبيت سعر الذهب النهائي عند إتمام عملية الدفع بنجاح فقط.</p>
+            </div>
+
+            <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>الشحن والتأمين</h3>
+                <p>يتم شحن جميع المشتريات عبر شركات شحن مؤمنة بالكامل داخل المملكة لضمان وصول قطعكم الثمينة بأمان.</p>
+            </div>
+
+            <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-ban"></i></div>
+                <h3>إلغاء الطلبات والاسترجاع</h3>
+                <p><strong>لا يمكن إلغاء الطلب نهائياً بعد إتمامه.</strong> كما لا يوجد استرجاع أو استبدال للاكسسوارات. نظراً لطبيعة الذهب الحساسة، لا يتم الاسترجاع إلا في حال وجود عيب مصنعي مثبت خلال 24 ساعة من استلام الشحنة.</p>
+            </div>
+
+            <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-lock"></i></div>
+                <h3>الخصوصية والأمان</h3>
+                <p>نلتزم بأعلى معايير تشفير البيانات لحماية معلوماتكم الشخصية والبنكية وفقاً لأنظمة التجارة الإلكترونية السعودية.</p>
+            </div>
+
+             <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-copyright"></i></div>
+                <h3>الملكية الفكرية</h3>
+                <p>جميع الصور، التصاميم، والشعارات المعروضة هي ملكية حصرية لمؤسسة تاج الأميرة ولا يجوز استخدامها دون إذن خطي.</p>
+            </div>
+
+             <div class="term-card-luxury">
+                <div class="term-icon-luxury"><i class="fa-solid fa-gavel"></i></div>
+                <h3>القانون والقضاء</h3>
+                <p>تخضع هذه الاتفاقية وتفسر وفقاً لأنظمة المملكة العربية السعودية، ويكون الاختصاص القضائي لمحاكم مدينة الرياض.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="legal-strip-luxury">
+        <div class="legal-info-item"><strong>السجل التجاري:</strong> 1010134685</div>
+        <div class="legal-divider-luxury"></div>
+        <div class="legal-info-item"><strong>الرقم الضريبي:</strong> {{ store.settings.tax.number ? store.settings.tax.number : '3013214697' }}</div>
+        <div class="legal-divider-luxury"></div>
+        <div class="legal-info-item"><strong>الرقم الموحد:</strong> 7002200579</div>
+    </div>
+
+</div>
+
+<style>
+.taj-terms-wrapper {
+    --brand-gold: #C5A059;
+    --brand-dark: #0B0B0B;
+    --apple-gray: #E6E8EB;
+    --soft-cream: #F9F7F2;
+    --text-slate: #1D2939;
+    --text-muted: #475467;
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.terms-hero { position: relative; height: 45vh; min-height: 380px; background-color: var(--soft-cream); display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 100px; }
+.terms-hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle, rgba(249, 247, 242, 0.95) 0%, rgba(255, 255, 255, 1) 100%); }
+.terms-hero-content { position: relative; z-index: 5; padding: 0 25px; }
+
+.royal-badge-pill { display: inline-block; border: 1px solid rgba(197, 160, 89, 0.6); color: var(--brand-gold) !important; background: rgba(197, 160, 89, 0.05); padding: 8px 25px; font-size: 0.85rem; font-weight: 700; border-radius: 50px; margin-bottom: 25px; letter-spacing: 0.5px; }
+.terms-title { font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.3; margin: 0 0 25px; color: var(--text-slate) !important; font-weight: 800; letter-spacing: -1px; }
+.gold-separator-luxury { width: 60px; height: 3px; background: var(--brand-gold); margin: 0 auto; border-radius: 10px; }
+
+.terms-section { padding: 90px 5%; max-width: 1300px; margin: 0 auto; }
+.intro-content { text-align: center; max-width: 850px; margin: 0 auto 40px; }
+.section-title-luxury { font-size: 2rem; color: var(--text-slate); font-weight: 800; margin-bottom: 25px; }
+.lead-text-luxury { font-size: 1.2rem; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
+
+.details-section { background-color: #FAFAFA; border-top: 1px solid var(--apple-gray); padding-bottom: 100px; }
+.terms-grid-luxury { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+
+.term-card-luxury { background: #ffffff; padding: 40px; border: 1px solid var(--apple-gray); border-top: 4px solid var(--brand-gold); border-radius: 12px; transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1); }
+.term-card-luxury:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: var(--brand-gold); }
+.term-icon-luxury { font-size: 2.2rem; color: var(--brand-gold); margin-bottom: 25px; opacity: 0.8; }
+.term-card-luxury h3 { font-size: 1.4rem; color: var(--text-slate); font-weight: 800; margin-bottom: 18px; }
+.term-card-luxury p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; font-weight: 400; }
+
+.legal-strip-luxury { background: #ffffff; color: var(--text-slate); padding: 25px 5%; display: flex; justify-content: center; align-items: center; gap: 30px; font-size: 0.95rem; flex-wrap: wrap; border-top: 1px solid var(--apple-gray); border-bottom: 1px solid var(--apple-gray); }
+.legal-info-item strong { color: var(--brand-gold); margin-left: 8px; font-weight: 700; }
+.legal-divider-luxury { width: 1px; height: 15px; background: var(--apple-gray); }
+
+.animate-up { animation: tajFadeUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards; opacity: 0; }
+@keyframes tajFadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+    .terms-hero { height: 40vh; padding-top: 80px; }
+    .terms-grid-luxury { grid-template-columns: 1fr; }
+    .legal-strip-luxury { flex-direction: column; gap: 15px; text-align: center; }
+    .legal-divider-luxury { display: none; }
+    .section-title-luxury { font-size: 1.6rem; }
+}
+</style>

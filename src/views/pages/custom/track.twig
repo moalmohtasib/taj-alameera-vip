@@ -1,0 +1,113 @@
+<div class="taj-track-minimalist">
+    
+    <div class="track-hero-slim">
+        <div class="hero-content-minimal animate-up">
+            <span class="minimal-label">خدمة العملاء</span>
+            <h1 class="minimal-title">تتبع حالة طلبك</h1>
+            <p class="minimal-subtitle">تابعي رحلة وصول مجوهراتك إليكِ بأمان</p>
+        </div>
+    </div>
+
+    <div class="track-section-minimal">
+        <div class="track-card-minimal animate-fade">
+            <div class="card-header-minimal">
+                <i class="fa-solid fa-box-open"></i>
+                <h2>أين شحنتي الآن؟</h2>
+                <p>يرجى إدخال رقم الطلب والبريد الإلكتروني المسجل.</p>
+            </div>
+
+            <div class="woo-tracking-custom">
+                <form action="/orders" method="GET">
+                    <div class="form-row">
+                        <label>رقم الطلب</label>
+                        <input type="text" name="order_id" placeholder="مثال: 12345">
+                    </div>
+                    <div class="form-row">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" name="email" placeholder="البريد المستخدم أثناء الطلب">
+                    </div>
+                    <button type="submit">تتبع الطلب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="track-section-minimal partners-linear">
+        <div class="partners-grid-minimal">
+            
+            <div class="partner-item">
+                <div class="partner-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="partner-text">
+                    <h4>شحن مؤمن 100%</h4>
+                    <p>جميع شحنات الذهب مؤمنة بالكامل ضد كافة المخاطر حتى لحظة الاستلام.</p>
+                </div>
+            </div>
+
+            <div class="partner-item">
+                <div class="partner-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="partner-text">
+                    <h4>سرعة الوصول</h4>
+                    <p>التوصيل داخل الرياض فوري، ولبقية مدن المملكة خلال 2-4 أيام عمل عبر سمسا وأرامكس.</p>
+                </div>
+            </div>
+
+            <div class="partner-item">
+                <div class="partner-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="partner-text">
+                    <h4>دعم فني مباشر</h4>
+                    <p>إذا واجهتِ أي صعوبة في التتبع، فريقنا متاح دائماً عبر الواتساب لمساعدتك.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<style>
+.taj-track-minimalist {
+    --gold: #C5A059;
+    --dark: #0B0B0B;
+    --apple-gray: #E6E8EB;
+    --soft-cream: #F9F7F2;
+    --text-main: #1D2939;
+    --text-muted: #667085;
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    background: #ffffff;
+}
+
+.track-hero-slim { padding: 130px 5% 70px; background-color: var(--soft-cream); background-image: linear-gradient(to bottom, rgba(249, 247, 242, 0.90), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; text-align: center; }
+.minimal-label { display: block; color: var(--gold); font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 20px; }
+.minimal-title { color: var(--text-main) !important; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin: 0 0 15px; line-height: 1.2; }
+.minimal-subtitle { color: var(--text-muted); font-size: 1.1rem; font-weight: 400; }
+
+.track-section-minimal { padding: 90px 5% 50px; }
+.track-card-minimal { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 60px 50px; border-radius: 24px; border: 1px solid var(--apple-gray); text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.02); }
+.card-header-minimal i { font-size: 2.5rem; color: var(--gold); margin-bottom: 25px; opacity: 0.8; }
+.card-header-minimal h2 { font-size: 1.8rem; color: var(--text-main); font-weight: 800; margin-bottom: 15px; }
+.card-header-minimal p { color: var(--text-muted); margin-bottom: 40px; font-weight: 300; }
+
+.woo-tracking-custom .form-row { margin-bottom: 20px; text-align: right; }
+.woo-tracking-custom label { display: block; margin-bottom: 10px; font-weight: 700; color: var(--text-main); font-size: 0.95rem; }
+.woo-tracking-custom input { width: 100%; padding: 16px 25px; border: 1px solid var(--apple-gray); border-radius: 50px; outline: none; transition: 0.3s; background: #ffffff; font-family: 'Almarai', sans-serif; }
+.woo-tracking-custom input:focus { border-color: var(--gold); box-shadow: 0 5px 15px rgba(197, 160, 89, 0.08); }
+.woo-tracking-custom button { width: 100%; padding: 18px; background: var(--gold); color: #fff; border: 1px solid var(--gold); border-radius: 50px; font-weight: 800; cursor: pointer; transition: 0.4s; font-family: 'Almarai', sans-serif; margin-top: 20px; }
+.woo-tracking-custom button:hover { background: transparent; color: var(--gold); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.15); }
+
+.partners-linear { background-color: var(--soft-cream); border-top: 1px solid var(--apple-gray); padding-bottom: 100px; }
+.partners-grid-minimal { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+.partner-item { display: flex; gap: 20px; align-items: flex-start; }
+.partner-icon { width: 50px; height: 50px; background: #fff; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.08); }
+.partner-text h4 { font-size: 1.15rem; color: var(--text-main); font-weight: 800; margin-bottom: 10px; }
+.partner-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; margin: 0;}
+
+.animate-up { animation: tajFadeInUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards; }
+@keyframes tajFadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+    .track-hero-slim { padding-top: 100px; }
+    .track-card-minimal { padding: 40px 25px; }
+    .partners-grid-minimal { gap: 40px; }
+}
+</style>

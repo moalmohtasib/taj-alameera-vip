@@ -1,0 +1,103 @@
+<div class="taj-faq-minimalist">
+    
+    <div class="faq-hero-slim">
+        <div class="hero-content-minimal animate-up">
+            <span class="minimal-label">الدعم والمساعدة</span>
+            <h1 class="minimal-title">الأسئلة الشائعة</h1>
+            <p class="minimal-subtitle">إجابات موجزة لتجربة تسوق راقية</p>
+        </div>
+    </div>
+
+    <div class="faq-linear-container">
+        
+        <div class="faq-category-minimal">
+            <h3 class="linear-cat-title">الجودة والضمان</h3>
+            
+            <details class="linear-faq-item">
+                <summary>هل الذهب مضمون وموثق؟</summary>
+                <div class="linear-answer">
+                    <p>جميع قطعنا مختومة بدمغة العيار الرسمية ومعتمدة من الجهات المختصة، وتصلكم مع فاتورة ضريبية رسمية تضمن كافة حقوقكم.</p>
+                </div>
+            </details>
+
+            <details class="linear-faq-item">
+                <summary>هل تبيعون الذهب المطلي؟</summary>
+                <div class="linear-answer">
+                    <p>نحن نتعامل بالذهب الخالص فقط (عيار 18، 21، 24). لا يوجد في مجموعاتنا أي قطع مطلية أو مقلدة نهائياً.</p>
+                </div>
+            </details>
+        </div>
+
+        <div class="faq-category-minimal">
+            <h3 class="linear-cat-title">الشحن والمدفوعات</h3>
+            
+            <details class="linear-faq-item">
+                <summary>ما هي مدة التوصيل المتوقعة؟</summary>
+                <div class="linear-answer">
+                    <p>داخل الرياض يتم التوصيل خلال 24 ساعة. لبقية مدن المملكة، يستغرق الشحن الآمن من 2 إلى 4 أيام عمل.</p>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <div class="faq-contact-minimal">
+        <div class="minimal-cta">
+            <h3>لم تجدي ما تبحثين عنه؟</h3>
+            <p>فريقنا متاح للإجابة على استفساراتك الخاصة</p>
+            <a href="https://wa.me/message/7ZXAN6XTQQG7I1" class="ghost-gold-btn" target="_blank">
+                محادثة واتساب مباشرة
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<style>
+.taj-faq-minimalist {
+    --gold: #C5A059;
+    --dark: #0B0B0B;
+    --light-gray: #E6E8EB;
+    --soft-cream: #F9F7F2;
+    --text-main: #1D2939;
+    --text-muted: #667085;
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    background: #ffffff;
+}
+
+.faq-hero-slim { padding: 120px 5% 60px; background-color: var(--soft-cream); background-image: linear-gradient(to bottom, rgba(249, 247, 242, 0.90), rgba(255, 255, 255, 0.95)); text-align: center; position: relative; }
+.minimal-label { display: block; color: var(--gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+.minimal-title { color: var(--text-main) !important; font-size: 2.5rem; font-weight: 800; margin: 0 0 10px; }
+.minimal-subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 400; }
+
+.faq-linear-container { max-width: 800px; margin: 0 auto; padding: 80px 5%; }
+.faq-category-minimal { margin-bottom: 60px; }
+
+.linear-cat-title { font-size: 0.9rem; color: var(--gold); font-weight: 800; text-transform: uppercase; border-bottom: 1px solid var(--light-gray); padding-bottom: 15px; margin-bottom: 20px; letter-spacing: 1px; }
+.linear-faq-item { border-bottom: 1px solid rgba(230, 232, 235, 0.5); }
+
+summary { padding: 25px 0; list-style: none; cursor: pointer; font-size: 1.1rem; font-weight: 400; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '\f105'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 0.9rem; color: var(--light-gray); transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1); transform: rotate(0deg); }
+details[open] summary { color: var(--gold); font-weight: 700; }
+details[open] summary::after { transform: rotate(-90deg); color: var(--gold); }
+
+.linear-answer { padding: 0 0 25px; color: var(--text-muted); line-height: 1.8; font-size: 1rem; font-weight: 300; animation: slideIn 0.4s ease-out; }
+
+.faq-contact-minimal { padding: 100px 5%; background: var(--soft-cream); border-top: 1px solid var(--light-gray); text-align: center; }
+.minimal-cta h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 10px; }
+.minimal-cta p { color: var(--text-muted); margin-bottom: 40px; font-weight: 300; }
+
+.ghost-gold-btn { display: inline-block; padding: 15px 45px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 0.95rem; background: transparent; transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1); }
+.ghost-gold-btn:hover { background: var(--gold); color: #fff; box-shadow: 0 10px 25px rgba(197, 160, 89, 0.2); transform: translateY(-2px); }
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-up { animation: tajFadeInUp 1s ease-out forwards; }
+@keyframes tajFadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 768px) {
+    .minimal-title { font-size: 2rem; }
+    summary { font-size: 1rem; }
+}
+</style>
