@@ -6,8 +6,6 @@
     "repository": "https://github.com/moalmohtasib/taj-alameera-vip",
     "author_email": "moalmohtasib@gmail.com",
     "features": [
-        "mega-menu",
-        "fonts",
         "color",
         "breadcrumb",
         "unite-cards-height",
