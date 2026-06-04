@@ -1,7 +1,7 @@
 {
     "name": {
-        "ar": "taj alameera vip",
-        "en": "taj alameera vip"
+        "ar": "taj alameera",
+        "en": "taj alameera"
     },
     "repository": "https://github.com/moalmohtasib/taj-alameera-vip",
     "author_email": "moalmohtasib@gmail.com",
@@ -1117,7 +1117,7 @@
     ],
     "support_url": "https://example.com",
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": null,
+        "en": null
     }
 }
