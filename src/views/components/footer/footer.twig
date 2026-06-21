@@ -1,72 +1,58 @@
-<footer class="store-footer">
-	<div aria-label="footer" class="store-footer__inner">
-		<div class="container grid grid-col-1 lg:grid-cols-6 gap-8 lg:gap-6">
-			<div class="lg:col-span-2 rtl:lg:pl-20 ltr:lg:pr-20">
-				<a href="{{ link('/') }}" class="flex items-center m-0">
-					<h3>{{store.name}}</h3>
-				</a>
-				{% if store.description %}
-					<div class="max-w-sm leading-6 mb-6">
-						{{ store.description|raw }}
-          </div>
-				{% endif %}
+<footer class="store-footer taj-luxury-footer-light">
+    {# FontAwesome for social icons — TODO: self-host post-approval #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-				<div class="hidden lg:block">
-					<salla-social class="block mb-6"></salla-social>
-				</div>
+    <div class="taj-f-top-logo">
+        <div class="container">
+            <a href="{{ link('/') }}">
+                <img src="{{ 'images/trans-logo.webp'|asset }}" alt="{{ store.name }} Logo">
+            </a>
+            <div class="taj-f-divider"></div>
+        </div>
+    </div>
 
-		<div class="flex gap-4">
-		  {# trust badges #}
-		  <salla-trust-badges {% if theme.settings.get('footer_is_dark') %} dark {% endif %}></salla-trust-badges>
-          {# vat #}
-          {% if store.settings.tax.number %}
-            <div class="flex rtl:space-x-reverse space-x-2 items-end">
-              {% if store.settings.tax.certificate %}
-                <a class="load-img-onclick" data-modal-id="modal-value-tax" href="#/" alt="{{ store.settings.tax.number }}">
-                  <img width="40" height="50" src="{{'images/tax.png' | cdn(70,70)}}" loading="lazy" class="w-10 rounded-sm hover:opacity-80 transition-opacity" alt="value added tax">
-                </a>
-              {% endif %}
-              <div>
-                <p class="text-sm text-text-grey mb-1">{{ trans('common.elements.tax_number') }}</p>
-                <b class="text-sm">{{ store.settings.tax.number }}</b>
-              </div>
+    <div class="container">
+        <div class="taj-f-grid-3">
+
+            <div class="taj-f-section newsletter-section">
+                <h4>كوني على إطلاع</h4>
+                <p>اشتركي ليصلكِ جديد تصاميمنا، العروض الحصرية، وآخر أخبار عالم الذهب.</p>
+                <div class="taj-subscribe-pill">
+                    <input type="email" placeholder="البريد الإلكتروني">
+                    <button>سجل الآن</button>
+                </div>
+                <div class="taj-social-minimal">
+                    <a href="https://www.instagram.com/tajalameera/" target="_blank" rel="noopener" title="Instagram" class="s-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://snapchat.com/t/X6qwIKNa" target="_blank" rel="noopener" title="Snapchat" class="s-sn"><i class="fa-brands fa-snapchat"></i></a>
+                    <a href="https://www.tiktok.com/@tajalameera?_r=1&_t=ZN-941wAC54Fdu" target="_blank" rel="noopener" title="TikTok" class="s-tk"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://wa.me/message/7ZXAN6XTQQG7I1" target="_blank" rel="noopener" title="WhatsApp" class="s-wa"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
 
-            {% if store.settings.tax.certificate %}
-              <salla-modal sub-title-first sub-title="{{ trans('common.elements.tax_number') }}" modal-title="{{ store.settings.tax.number }}" id="modal-value-tax">
-                <div class="flex justify-center max-w-full">
-                  <img class="w-full" loading="lazy"
-                  data-src="{{ store.settings.tax.certificate }}"
-                  alt="{{ store.settings.tax.number }}"/>
+            <div class="taj-f-section taj-f-section-menu">
+                <h4>روابط</h4>
+                <salla-menu source="footer"></salla-menu>
+            </div>
+
+            <div class="taj-f-section taj-f-section-trust">
+                <h4>موثوقية</h4>
+                <div class="taj-trust-inline">
+                    <p>سجل تجاري: 1010134685</p>
+                    <p>الرقم الضريبي: 3013214697</p>
                 </div>
-              </salla-modal>
-            {% endif %}
-          {% endif %}
+                <a href="https://qr.mc.gov.sa/info/review?lang=ar&q=18bcm/EwQcB8MolmWsRQqQ==" target="_blank" rel="noopener" class="taj-luxury-qr">
+                    <img src="{{ 'images/verified-business-qr.webp'|asset }}" alt="Verified Business">
+                    <span>انقر للتحقق من السجل التجاري</span>
+                </a>
+            </div>
+
         </div>
+
+        <div class="taj-f-copyright-row">
+            <p>جميع الحقوق محفوظة © {{ "now"|date("Y") }} {{ store.name }}</p>
+            <div class="taj-payment-icons">
+                <img src="{{ 'images/payment-getaway.webp'|asset }}" alt="Payments">
+            </div>
         </div>
-
-			<div>
-				<h3>{{ trans('blocks.footer.pages_links') }}</h3>
-				<salla-menu source="footer" with-cookie-preferences></salla-menu>
-			</div>
-
-			<div>
-				<salla-contacts></salla-contacts>
-
-				<div class="lg:hidden contact-social">
-					<salla-social></salla-social>
-				</div>
-			</div>
-
-			<salla-apps-icons class="lg:col-span-2 rtl:lg:pr-20 ltr:lg:pl-20"></salla-apps-icons>
-
-		</div>
-	</div>
-
-	<div class="md:flex items-center justify-between py-4 container text-center">
-		<span class="text-sm copyright-text">{% hook copyright %}</span>
-		<salla-payments></salla-payments>
-	</div>
-</div>
-
-<span class="hidden bottom-2 rtl:pl-24 ltr:pr-24 md:grid-cols-3 opacity-40"></span></footer>
+    </div>
+</footer>

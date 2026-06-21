@@ -66,7 +66,6 @@
 
     {% block head_scripts %}{% endblock %}
 
-
     <script data-cfasync="false">
         window.header_is_sticky = "{{theme.settings.get('header_is_sticky', 'Default Value')}}"
         window.imageZoom = "{{theme.settings.get('imageZoom')}}"
@@ -185,11 +184,15 @@
 <div class="app-inner flex flex-col min-h-full">
     {% hook 'body:start' %}
     {% component 'header.header' %}
+    
     <main id="main-content" role="main"{{ (page.slug == 'product.single' or page.slug starts with 'product.index') ? ' class="flex flex-col space-y-8 sm:space-y-16"' : '' }}>
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
     </main>
+
     {% component 'footer.footer' %}
-</div>
+
+</div> <!-- This closes the app-inner div -->
+
 {% hook 'body:end' %}
 {% if theme.settings.get('enable_add_product_toast', true) %}
     <salla-add-product-toast></salla-add-product-toast>

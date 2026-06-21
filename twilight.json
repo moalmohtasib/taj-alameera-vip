@@ -294,15 +294,9 @@
                     "item_label": "صورة",
                     "value": [
                         {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/MopzhoqpTkDObcKc8Q8n77AuydanfsGXdZO7iinH.jpg",
-                            "slides.title": "روِّج لمنتجاتك كصور متحركة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
-                            "slides.without_overlay": false
-                        },
-                        {
-                            "slides.image": "https://cdn.salla.sa/ZrBEO/3gOhYSaIhaHxhH2IHWxJYDl9JHwxP6dGKiZFSq4K.jpg",
-                            "slides.title": "شجّع زوار متجرك على الشراء عبر عروض خاصة",
-                            "slides.description": "اعرض المنتجات التي تود إبرازها لزوّار متجرك في هذه المساحة",
+                            "slides.image": "images/hero-bg.webp",
+                            "slides.title": "تاج الأميرة",
+                            "slides.description": "أناقة الذهب بأرقى التصاميم",
                             "slides.without_overlay": false
                         }
                     ],
@@ -803,34 +797,34 @@
                     "item_label": "صورة",
                     "value": [
                         {
-                            "banners.image": "https://cdn.salla.sa/mQgZlG/pzOCEw10wCfXeVSpKnL0Ifd1O9ZkTfnZ17RkE14R.jpg",
+                            "banners.image": "images/Bracelets.webp",
                             "banners.url": null,
-                            "banners.title": "تصفَّح حسب التصنيف",
-                            "banners.description": "سهِّل تجربة التسوُّق والوصول لمنتجاتك"
+                            "banners.title": "أساور",
+                            "banners.description": "تشكيلة فاخرة من الأساور الذهبية"
                         },
                         {
-                            "banners.image": "https://cdn.salla.sa/mQgZlG/lkyDjYwvWJNmAQoGnLALLcUkm66rCCDbTyVlSGdH.jpg",
+                            "banners.image": "images/Chains.webp",
                             "banners.url": null,
-                            "banners.title": "تصفَّح حسب التصنيف",
-                            "banners.description": "سهِّل تجربة التسوُّق والوصول لمنتجاتك"
+                            "banners.title": "سلاسل",
+                            "banners.description": "أرقى سلاسل الذهب بتصاميم عصرية"
                         },
                         {
-                            "banners.image": "https://cdn.salla.sa/mQgZlG/lkyDjYwvWJNmAQoGnLALLcUkm66rCCDbTyVlSGdH.jpg",
+                            "banners.image": "images/Gold-Bars.webp",
                             "banners.url": null,
-                            "banners.title": "تصفَّح حسب التصنيف",
-                            "banners.description": "سهِّل تجربة التسوُّق والوصول لمنتجاتك"
+                            "banners.title": "سبائك ذهب",
+                            "banners.description": "سبائك ذهب بأعلى جودة"
                         },
                         {
-                            "banners.image": "https://cdn.salla.sa/mQgZlG/lkyDjYwvWJNmAQoGnLALLcUkm66rCCDbTyVlSGdH.jpg",
+                            "banners.image": "images/Kids.webp",
                             "banners.url": null,
-                            "banners.title": "تصفَّح حسب التصنيف",
-                            "banners.description": "سهِّل تجربة التسوُّق والوصول لمنتجاتك"
+                            "banners.title": "للأطفال",
+                            "banners.description": "مجوهرات أنيقة للأطفال"
                         },
                         {
-                            "banners.image": "https://cdn.salla.sa/mQgZlG/lkyDjYwvWJNmAQoGnLALLcUkm66rCCDbTyVlSGdH.jpg",
+                            "banners.image": "images/Rings.webp",
                             "banners.url": null,
-                            "banners.title": "تصفَّح حسب التصنيف",
-                            "banners.description": "سهِّل تجربة التسوُّق والوصول لمنتجاتك"
+                            "banners.title": "خواتم",
+                            "banners.description": "خواتم ذهبية بتصاميم استثنائية"
                         }
                     ],
                     "fields": [

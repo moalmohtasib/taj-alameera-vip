@@ -3,53 +3,7 @@
  * tailwind classes with @apply directive in the SCSS files
 */
 
-/**
- * SETTINGS
- * Tailwind.............Import tailwind.
- * Fonts................Any font files.
- * Global...............Project-specific, globally available variables.
- * Breakpoints..........Mixins and variables for responsive styles.
- *
- * GENERIC
- * Common...............All commn styles and assistan classes and common style fixes
- * Reset................Reset specific elements to make them easier to style in other contexts.
- * Animations...........Some of animations from anime.css
- * Lazyload.............Lazyload placeholder styles
- * RTL..................Specific styles for RTL.
- * LTR..................Specific styles for LTR.
- *
- * ELEMENTS
- * Forms................Element-level form styling.
- * Buttons..............Specific styles for buttons.
- * Radio................Specific styles for custom radio button.
- * Radio Images.........Specific styles for radio images, used in product options.
- *
- * COMPONENTS
- * Header...............Specific styles for header styles.
- * Footer...............Specific styles for footer styles.
- * Menu.................Specific styles for main menu and mobile menu styles.
- * User Menu............Specific styles for user menu dropdown.
- * User Pages...........Specific styles for user pages like profile, notifications, orders...
- * Home Blocks..........Specific styles for home blocks.
- * Slider...............Specific styles for sliders.
- * Product..............Specific styles for single product page and it's elements.
- * Brands...............Specific styles for brands page.
- * Placeholder..........Specific styles for no content placeholders.
- * Gifting..............Specific styles for gifting system.
- * Loyalty..............Specific styles for loyalty system.
- *
- * UTILITIES
- * Chat Bots............Specific styles for chats bots widget.
- * Swal.................Specific styles for Sweet Alert addon.
- * Safari Fixes.........Specific styles for Safari Browser.
- *
- * EMBEDED ADDONS
- * Lite Youtube Embed...Specific styles for lite-youtube-embed addon.
- * Swiper...............Specific styles for swiper slider addon.
- * MMenu................Specific styles for mmenu addon.
- *
-*/
-
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 @import './01-settings/tailwind';
 @import './01-settings/fonts';
 @import './01-settings/global';
@@ -93,3 +47,139 @@
 
 @import 'lite-youtube-embed/src/lite-yt-embed.css';
 @import 'mmenu-light/dist/mmenu-light.css';
+
+/* ==========================================
+   TAJ ALAMEERA - CUSTOM FOOTER STYLES
+   ========================================== */
+
+.taj-luxury-footer-light {
+    background-color: #F9F7F2; 
+    padding: 80px 0 40px;
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    color: #1D2939; 
+    border-top: 1px solid #E6E8EB; 
+}
+
+.taj-f-top-logo { text-align: center; margin-bottom: 50px; }
+.taj-f-top-logo img { max-height: 90px; width: auto; margin-bottom: 30px; }
+.taj-f-divider { height: 1px; background: rgba(197, 160, 89, 0.2); width: 100%; max-width: 1200px; margin: 0 auto; }
+
+.taj-f-grid-4 {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.taj-f-grid-3 {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.taj-f-section-menu salla-menu {
+    display: block;
+}
+.taj-f-section-menu salla-menu ul,
+.taj-f-section-menu salla-menu li { list-style: none; padding: 0; margin: 0; }
+.taj-f-section-menu salla-menu a {
+    color: #4A5A75;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 2.1;
+    transition: color .2s ease;
+}
+.taj-f-section-menu salla-menu a:hover { color: #C5A059; }
+
+.taj-f-section h4 {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #C5A059; 
+    margin-bottom: 25px;
+    letter-spacing: -0.3px;
+}
+
+.clean-links { list-style: none; padding: 0; margin: 0; }
+.clean-links li { margin-bottom: 14px; }
+.clean-links a {
+    color: rgba(29, 41, 57, 0.7); 
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    font-weight: 400;
+}
+.clean-links a:hover { color: #C5A059; padding-right: 5px; }
+
+.newsletter-section p { color: rgba(29, 41, 57, 0.6); font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px; }
+.taj-subscribe-pill { 
+    display: flex; 
+    background: #ffffff; 
+    border-radius: 50px; 
+    padding: 5px; 
+    border: 1px solid #E6E8EB; 
+    margin-bottom: 25px;
+}
+.taj-subscribe-pill input { 
+    border: none; flex: 1; padding: 12px 20px; font-size: 0.85rem; outline: none; background: transparent; color: #1D2939;
+}
+.taj-subscribe-pill button { 
+    background: #C5A059; color: #fff; border: none; padding: 10px 25px; font-size: 0.85rem; cursor: pointer; border-radius: 50px; transition: 0.3s; font-weight: 700;
+}
+.taj-subscribe-pill button:hover { background: #A6803F; transform: scale(1.02); }
+
+.taj-social-minimal { display: flex; gap: 25px; }
+.taj-social-minimal a { 
+    color: rgba(29, 41, 57, 0.35); 
+    font-size: 1.55rem; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.taj-social-minimal a:hover { transform: translateY(-6px) scale(1.15); }
+.taj-social-minimal a.s-ig:hover { color: #E1306C; }
+.taj-social-minimal a.s-sn:hover { color: #FFFC00; text-shadow: 0 0 8px rgba(0,0,0,0.1); }
+.taj-social-minimal a.s-tk:hover { color: #000000; }
+.taj-social-minimal a.s-wa:hover { color: #25D366; }
+
+.taj-trust-inline { margin-top: 25px; }
+.taj-trust-inline p { color: rgba(29, 41, 57, 0.4); font-size: 0.8rem; margin-bottom: 6px; }
+
+.taj-luxury-qr { 
+    display: inline-flex; flex-direction: column; align-items: center; 
+    text-decoration: none; margin-top: 25px;
+    background: #ffffff; padding: 15px; border-radius: 15px; border: 1px solid #E6E8EB;
+}
+.taj-luxury-qr img { width: 80px; height: auto; border-radius: 8px; }
+.taj-luxury-qr span { color: rgba(29, 41, 57, 0.5); font-size: 10px; margin-top: 10px; font-weight: 400; }
+
+.taj-f-copyright-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    border-top: 1px solid #E6E8EB;
+}
+.taj-f-copyright-row p { color: rgba(29, 41, 57, 0.5); font-size: 0.85rem; margin: 0; font-weight: 400; }
+.taj-payment-icons img { max-height: 24px; opacity: 0.8; transition: 0.4s; }
+.taj-payment-icons img:hover { opacity: 1; }
+
+@media (max-width: 992px) {
+    .taj-f-grid-4 { grid-template-columns: 1fr 1fr; }
+    .taj-f-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+    .taj-f-grid-4 { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+    .taj-f-grid-3 { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+    .taj-subscribe-pill { margin: 0 auto 25px; max-width: 400px; }
+    .taj-social-minimal { justify-content: center; }
+    .taj-f-copyright-row { flex-direction: column; gap: 25px; }
+    .taj-luxury-qr { align-self: center; }
+}
+
+/* ==========================================
+   KILL SALLA DEFAULT FOOTER
+   ========================================== */
+footer.store-footer:not(.taj-luxury-footer-light) {
+    display: none !important;
+}
