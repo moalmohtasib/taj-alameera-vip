@@ -10,7 +10,8 @@
   /* ====== Image URLs (jsDelivr CDN, from GitHub repo) ====== */
   var CDN = "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/salla-inject/media/";
   var MEDIA = {
-    hero:     CDN + "hero-bg.webp",
+    heroVideo:  CDN + "hero.mp4",
+    heroPoster: CDN + "hero-poster.jpg",
     rings:    CDN + "Rings.webp",
     bracelets:CDN + "Bracelets.webp",
     chains:   CDN + "Chains.webp",
@@ -136,7 +137,6 @@
   };
 
   /* ---------- 3. Home hero + boutique modal (home page only) ---------- */
-  var HERO_BG = MEDIA.hero;
   var CATEGORIES = [
     { href: "/category/rings",     img: MEDIA.rings, text: "خواتم" },
     { href: "/category/bracelets", img: MEDIA.bracelets, text: "أساور" },
@@ -146,7 +146,9 @@
   ];
 
   var HOME_CSS = [
-    ".tp-hero-wrapper{width:100%;height:100vh;height:100dvh;display:flex;align-items:center;justify-content:center;position:relative;padding-top:80px;background-image:linear-gradient(to bottom,rgba(11,11,11,0.4),rgba(11,11,11,0.8)),url('" + HERO_BG + "');background-size:cover;background-position:center;}",
+    ".tp-hero-wrapper{width:100%;height:100vh;height:100dvh;display:flex;align-items:center;justify-content:center;position:relative;padding-top:80px;overflow:hidden;background:var(--brand-dark);}",
+    ".tp-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}",
+    ".tp-hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(11,11,11,0.4),rgba(11,11,11,0.8));}",
     ".tp-hero-content{position:relative;z-index:10;text-align:center;padding:0 25px;max-width:850px;}",
     ".tp-subtitle-box{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:25px;}",
     ".tp-accent-line{width:50px;height:1.5px;background:var(--brand-gold);border-radius:2px;}",
@@ -204,6 +206,10 @@
     var hero = document.createElement("div");
     hero.className = "tp-hero-wrapper";
     hero.innerHTML =
+      '<video class="tp-hero-video" autoplay muted loop playsinline preload="auto" poster="' + MEDIA.heroPoster + '">' +
+        '<source src="' + MEDIA.heroVideo + '" type="video/mp4">' +
+      '</video>' +
+      '<div class="tp-hero-overlay"></div>' +
       '<div class="tp-hero-content">' +
         '<div class="tp-subtitle-box"><span class="tp-accent-line"></span>' +
         '<h2 class="tp-pre-title">مرحباً بكم في عالم الأناقة</h2>' +
