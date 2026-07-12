@@ -36,10 +36,11 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
   - سبائك → /gold-ar/c1591793254
 - Verified: rings/gold-ar/necklace all HTTP 200 live.
 
-### 3. jsDelivr cache — settle check  (priority: LOW)
-- Some shrunk category images may still serve OLD size for a few min after purge.
-- Re-purge if needed: `https://purge.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/salla-inject/media/FILE.webp`
-- After code change to repo, jsDelivr `@master` caches ~12h. To force fresh: purge, OR pin URL to commit hash.
+### 3. jsDelivr cache — settle check  ✅ DONE
+- All 5 category webp serve HTTP 200 fresh shrunk sizes from CDN:
+  Rings 35K, Bracelets 46K, Chains 30K, Kids 14K, Gold-Bars 44K.
+- No stale sizes. Cache settled.
+- Reminder: after repo change, `@master` caches ~12h. Force fresh: purge, OR pin URL to commit hash.
 
 ### 4. Mobile test  (priority: MEDIUM)
 - Verify hero video autoplays on iOS/Android (needs `muted` + `playsinline` — both present, but test real device).
