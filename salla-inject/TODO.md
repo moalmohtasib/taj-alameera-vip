@@ -43,8 +43,10 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - Reminder: after repo change, `@master` caches ~12h. Force fresh: purge, OR pin URL to commit hash.
 
 ### 4. Mobile test  (priority: MEDIUM)
-- Verify hero video autoplays on iOS/Android (needs `muted` + `playsinline` — both present, but test real device).
-- Verify ticker + modal layout on small screens.
+- iOS battery saver blocks video autoplay (Apple hard rule, no JS override).
+- FIXED: poster now paints as hero background always; if `play()` rejected,
+  `<video>` hides so clean poster shows — no play button, works every mode.
+- Still to verify on real device: normal-mode autoplay + ticker/modal layout small screens.
 
 ### 5. Content polish  (priority: LOW)
 - Hero text hardcoded Arabic. Confirm final copy.
