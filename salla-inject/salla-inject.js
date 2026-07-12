@@ -22,7 +22,7 @@
 
   var PROXY_URL = "https://taj-gold-proxy.tajalamerahost.workers.dev/";
   var REFRESH_MS = 60 * 1000; // 1 minute
-  var SAR_SVG = "https://tajalameera.com/wp-content/uploads/2026/02/Saudi_Riyal_Symbol-2.svg";
+  var SAR_SVG = CDN + "Saudi_Riyal_Symbol.svg";
 
   /* ---------- 1. Inject styles ---------- */
   var CSS = [
