@@ -21,11 +21,11 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 
 ## TODO (next session)
 
-### 1. SAR riyal icon — DEAD LINK  (priority: HIGH)
-- Line 25: `SAR_SVG` still points to offline WordPress:
-  `https://tajalameera.com/wp-content/uploads/2026/02/Saudi_Riyal_Symbol-2.svg`
-- Riyal icon in gold ticker WILL NOT SHOW.
-- Fix: add `Saudi_Riyal_Symbol.svg` to `salla-inject/media/`, push, swap URL to jsDelivr.
+### 1. SAR riyal icon — DEAD LINK  ✅ DONE
+- Was: `SAR_SVG` pointed to offline WordPress path.
+- Fixed: `Saudi_Riyal_Symbol.svg` (923B) added to media, pushed, jsDelivr purged.
+- Now: `SAR_SVG = CDN + "Saudi_Riyal_Symbol.svg"`. Verified live HTTP 200.
+- Note: uses `mask-image` so SVG fill color irrelevant, tints to `currentColor`.
 
 ### 2. Category links — VERIFY  (priority: HIGH)
 - Lines 141-145 hrefs are guesses: `/category/rings`, `/bracelets`, `/chains`, `/kids`, `/gold-bars`
