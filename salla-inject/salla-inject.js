@@ -138,11 +138,11 @@
 
   /* ---------- 3. Home hero + boutique modal (home page only) ---------- */
   var CATEGORIES = [
-    { href: "/category/rings",     img: MEDIA.rings, text: "خواتم" },
-    { href: "/category/bracelets", img: MEDIA.bracelets, text: "أساور" },
-    { href: "/category/chains",    img: MEDIA.chains, text: "سلاسل" },
-    { href: "/category/kids",      img: MEDIA.kids,   text: "أطفال" },
-    { href: "/category/gold-bars", img: MEDIA.goldbars,   text: "سبائك" }
+    { href: "/rings/c1807821848",    img: MEDIA.rings, text: "خواتم" },
+    { href: "/bracelets/c395012634", img: MEDIA.bracelets, text: "أساور" },
+    { href: "/necklace/c1632733467", img: MEDIA.chains, text: "سلاسل" },
+    { href: "/kids/c219920229",      img: MEDIA.kids,   text: "أطفال" },
+    { href: "/gold-ar/c1591793254",  img: MEDIA.goldbars,   text: "سبائك" }
   ];
 
   var HOME_CSS = [
