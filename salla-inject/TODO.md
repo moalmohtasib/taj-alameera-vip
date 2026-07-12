@@ -27,10 +27,14 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - Now: `SAR_SVG = CDN + "Saudi_Riyal_Symbol.svg"`. Verified live HTTP 200.
 - Note: uses `mask-image` so SVG fill color irrelevant, tints to `currentColor`.
 
-### 2. Category links — VERIFY  (priority: HIGH)
-- Lines 141-145 hrefs are guesses: `/category/rings`, `/bracelets`, `/chains`, `/kids`, `/gold-bars`
-- Salla usually uses numeric category IDs (e.g. `/ar/category/12345/name`).
-- Check real category URLs in Salla dashboard, update each `href`.
+### 2. Category links — VERIFY  ✅ DONE
+- Real Salla IDs applied (lines 141-145), pattern `/{slug}/c{id}`, locale prefix dropped:
+  - خواتم → /rings/c1807821848
+  - أساور → /bracelets/c395012634
+  - سلاسل → /necklace/c1632733467
+  - أطفال → /kids/c219920229
+  - سبائك → /gold-ar/c1591793254
+- Verified: rings/gold-ar/necklace all HTTP 200 live.
 
 ### 3. jsDelivr cache — settle check  (priority: LOW)
 - Some shrunk category images may still serve OLD size for a few min after purge.
