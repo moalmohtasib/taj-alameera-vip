@@ -7,14 +7,15 @@
 (function () {
   "use strict";
 
-  /* ====== EDIT HERE: paste your Salla CDN image URLs ====== */
+  /* ====== Image URLs (jsDelivr CDN, from GitHub repo) ====== */
+  var CDN = "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/salla-inject/media/";
   var MEDIA = {
-    hero:     "PASTE_HERO_URL",
-    rings:    "PASTE_RINGS_URL",
-    bracelets:"PASTE_BRACELETS_URL",
-    chains:   "PASTE_CHAINS_URL",
-    kids:     "PASTE_KIDS_URL",
-    goldbars: "PASTE_GOLDBARS_URL"
+    hero:     CDN + "hero-bg.webp",
+    rings:    CDN + "Rings.webp",
+    bracelets:CDN + "Bracelets.webp",
+    chains:   CDN + "Chains.webp",
+    kids:     CDN + "Kids.webp",
+    goldbars: CDN + "Gold-Bars.webp"
   };
   /* ======================================================== */
 
