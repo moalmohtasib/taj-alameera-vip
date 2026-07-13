@@ -53,6 +53,14 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 - Still to verify on device: animation smoothness + ticker/modal layout small screens.
 
+### 6. Header over hero  ✅ DONE
+- Transparent header on home, fades to solid on scroll (~80% past hero).
+- White text/logo over video (`filter:brightness(0) invert(1)`), gold on hover.
+- Full-width: override theme `.container` (max-width/width 100%, 40px pad).
+- Taller: `.h-20`→88px, logo img→78px so it reads as one overlay not small bar.
+- Search trigger removed on home (`button[aria-label='Search']` display:none).
+- REQUIRES RE-PASTE of salla-inject.js into Salla panel.
+
 ### 5. Content polish  (priority: LOW)
 - Hero text hardcoded Arabic. Confirm final copy.
 - Category Arabic labels: خواتم/أساور/سلاسل/أطفال/سبائك — confirm match store categories.
