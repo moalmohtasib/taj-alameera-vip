@@ -178,7 +178,7 @@
     "@keyframes tpPopIn{from{opacity:0;transform:scale(0.9) translateY(40px);}to{opacity:1;transform:scale(1) translateY(0);}}",
     ".tp-modal-scroll-area::-webkit-scrollbar{width:0;}",
     /* Transparent header over hero video (home only), fades to solid on scroll */
-    ".taj-transparent-header{position:relative !important;width:100%;z-index:99998;background:var(--soft-cream) !important;box-shadow:none !important;border-bottom:1px solid var(--border-hex) !important;}",
+    ".taj-transparent-header{position:absolute !important;top:46px;left:0;width:100%;z-index:99998;background:transparent !important;box-shadow:none !important;border-bottom:none !important;}",
     ".taj-transparent-header .inner,.taj-transparent-header .main-nav-container{background:transparent !important;}",
     /* Full-width header content over hero (theme .container constrains it otherwise) */
     ".taj-transparent-header .container{max-width:100% !important;width:100% !important;padding-left:40px !important;padding-right:40px !important;}",
