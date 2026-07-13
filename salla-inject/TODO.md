@@ -53,21 +53,32 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 - Still to verify on device: animation smoothness + ticker/modal layout small screens.
 
-### 6. Header  ✅ DONE (reworked)
+### 6. Header  🔧 IN PROGRESS (finish tomorrow)
 - Live store runs Salla DEFAULT header, NOT the twig (logo left, menu inline,
   components render in LIGHT DOM `hydrated` — no shadow root, so `::part()` useless).
-- Floating/transparent + scroll-fade REMOVED. Now static SOLID cream bar under ticker
-  (`.taj-transparent-header{position:relative;background:soft-cream;border-bottom}`).
-- Scroll listener deleted from `setupTransparentHeader` (no `.taj-scrolled` toggle).
-- Icons gold ALWAYS via `.store-header i/a/button{color:brand-gold}` (cart icon is
-  font `<i class="sicon-shopping-bag">`, login is svg no-fill). Hover → brand-dark.
+- TRIED solid cream bar (`position:relative;background:soft-cream`) — user said
+  header + everything above it to top bar showed as WHITE bg. Felt off.
+- CURRENT state (commit b0bec0c): reverted to TRANSPARENT-over-hero.
+  `.taj-transparent-header{position:absolute;top:46px;left:0;background:transparent;
+  border-bottom:none}`. Gold logo+icons float over dark hero. No white bar.
+- Line refs (salla-inject.js): header block ~181-208, setupTransparentHeader ~289-293.
+- Icons gold via `.store-header i/a/button{color:brand-gold}` (cart = font
+  `<i class="sicon-shopping-bag">`, login = svg no-fill). Hover → brand-dark.
 - White circle killed via REAL classes: `.s-user-menu-login-btn`, `.s-cart-summary-wrapper`,
-  `.s-cart-summary-count` (bg transparent). svg fill → gold.
+  `.s-cart-summary-count` (bg transparent). svg fill → gold. svg clamped 24px.
+- Row height: `.container>div{min-height:72px;align-items:center}` (live row has no `.h-20`,
+  uses `items-stretch` — was stretching login svg huge).
 - Menu centered: `.store-header custom-main-menu{position:absolute;left:50%;translateX(-50%)}`.
-- Search removed (broad selectors incl `[onclick*='search::open']`, `.sicon-search`).
-- Mobile: logo 44px + centered, row 64px, container 16px pad (@media ≤768px).
-- Commits: b1a9a1c, bd388e3, 9e579ed, 03251b6, 12b5554, 3df6f5b.
-- REQUIRES RE-PASTE of salla-inject.js into Salla panel.
+- Search removed. Mobile: logo 44px centered, container 16px pad (@media ≤768px).
+- Commits: 9e579ed, 03251b6, 12b5554, 3df6f5b, 3a89081, a6e60f0, b0bec0c.
+- REQUIRES RE-PASTE of salla-inject.js into Salla panel, then screenshot to verify.
+
+### TOMORROW — pick up here
+- Verify transparent header renders right over hero (re-paste + screenshot).
+- If white STILL above header: not header — it's page body/main bg between ticker
+  and hero. Check `main`/body bg, may need `background:var(--brand-dark)` on wrapper.
+- Then broader MOBILE checkup — user: "on mobile too many things wrong".
+  Check: ticker, burger menu, hero animation, category modal on small screens.
 
 ### 5. Content polish  (priority: LOW)
 - Hero text hardcoded Arabic. Confirm final copy.
