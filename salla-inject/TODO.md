@@ -53,12 +53,20 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 - Still to verify on device: animation smoothness + ticker/modal layout small screens.
 
-### 6. Header over hero  ✅ DONE
-- Transparent header on home, fades to solid on scroll (~80% past hero).
-- White text/logo over video (`filter:brightness(0) invert(1)`), gold on hover.
-- Full-width: override theme `.container` (max-width/width 100%, 40px pad).
-- Taller: `.h-20`→88px, logo img→78px so it reads as one overlay not small bar.
-- Search trigger removed on home (`button[aria-label='Search']` display:none).
+### 6. Header  ✅ DONE (reworked)
+- Live store runs Salla DEFAULT header, NOT the twig (logo left, menu inline,
+  components render in LIGHT DOM `hydrated` — no shadow root, so `::part()` useless).
+- Floating/transparent + scroll-fade REMOVED. Now static SOLID cream bar under ticker
+  (`.taj-transparent-header{position:relative;background:soft-cream;border-bottom}`).
+- Scroll listener deleted from `setupTransparentHeader` (no `.taj-scrolled` toggle).
+- Icons gold ALWAYS via `.store-header i/a/button{color:brand-gold}` (cart icon is
+  font `<i class="sicon-shopping-bag">`, login is svg no-fill). Hover → brand-dark.
+- White circle killed via REAL classes: `.s-user-menu-login-btn`, `.s-cart-summary-wrapper`,
+  `.s-cart-summary-count` (bg transparent). svg fill → gold.
+- Menu centered: `.store-header custom-main-menu{position:absolute;left:50%;translateX(-50%)}`.
+- Search removed (broad selectors incl `[onclick*='search::open']`, `.sicon-search`).
+- Mobile: logo 44px + centered, row 64px, container 16px pad (@media ≤768px).
+- Commits: b1a9a1c, bd388e3, 9e579ed, 03251b6, 12b5554, 3df6f5b.
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 
 ### 5. Content polish  (priority: LOW)
