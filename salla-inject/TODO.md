@@ -43,10 +43,14 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - Reminder: after repo change, `@master` caches ~12h. Force fresh: purge, OR pin URL to commit hash.
 
 ### 4. Mobile test  (priority: MEDIUM)
-- iOS battery saver blocks video autoplay (Apple hard rule, no JS override).
-- FIXED: poster now paints as hero background always; if `play()` rejected,
-  `<video>` hides so clean poster shows — no play button, works every mode.
-- Still to verify on real device: normal-mode autoplay + ticker/modal layout small screens.
+- iOS battery saver blocks `<video>` autoplay (Apple hard rule, no JS override).
+  Showed static poster on iPhone — user reported "shows as photo".
+- FIXED: dropped `<video>`, now animated webp in `<img>`. Animated webp plays
+  in EVERY power mode (battery saver incl.), no autoplay permission needed.
+  Rebuilt from source: 800x450, 47 frames, q62, 498KB (under old 763KB mp4).
+  Poster still set as hero background = instant paint + fallback if load fails.
+- REQUIRES RE-PASTE of salla-inject.js into Salla panel.
+- Still to verify on device: animation smoothness + ticker/modal layout small screens.
 
 ### 5. Content polish  (priority: LOW)
 - Hero text hardcoded Arabic. Confirm final copy.
