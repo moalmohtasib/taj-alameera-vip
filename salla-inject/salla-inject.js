@@ -190,8 +190,12 @@
     ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:var(--brand-gold) !important;}",
     ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:#fff !important;}",
     /* Logo keeps its real gold color (no white invert) */
-    /* Center the nav menu horizontally in the header */
-    ".taj-transparent-header .taj-main-menu,.store-header .taj-main-menu{position:absolute;left:50%;transform:translateX(-50%);display:flex;justify-content:center;}",
+    /* Center nav menu in header (target live web component, not theme wrapper) */
+    ".store-header custom-main-menu,.store-header .taj-main-menu{position:absolute !important;left:50% !important;transform:translateX(-50%) !important;display:flex !important;justify-content:center !important;}",
+    /* Kill white circle backgrounds behind header icons */
+    ".taj-transparent-header salla-user-menu,.taj-transparent-header salla-cart-summary,.store-header salla-user-menu,.store-header salla-cart-summary{background:transparent !important;}",
+    ".store-header salla-user-menu::part(avatar),.store-header salla-user-menu::part(base),.store-header salla-cart-summary::part(base){background:transparent !important;box-shadow:none !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) .header-btn,.taj-transparent-header:not(.taj-scrolled) [class*='avatar'],.taj-transparent-header:not(.taj-scrolled) [class*='circle']{background:transparent !important;border-color:var(--brand-gold) !important;}",
     ".taj-transparent-header.taj-scrolled{background:rgba(249,247,242,0.95) !important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,0.06);border-bottom:1px solid var(--border-hex) !important;}",
     "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}.taj-transparent-header{top:40px;}}"
   ].join("\n");
