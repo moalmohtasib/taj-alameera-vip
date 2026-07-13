@@ -178,7 +178,7 @@
     "@keyframes tpPopIn{from{opacity:0;transform:scale(0.9) translateY(40px);}to{opacity:1;transform:scale(1) translateY(0);}}",
     ".tp-modal-scroll-area::-webkit-scrollbar{width:0;}",
     /* Transparent header over hero video (home only), fades to solid on scroll */
-    ".taj-transparent-header{position:fixed !important;top:46px;left:0;right:0;width:100%;z-index:99998;background:transparent !important;box-shadow:none !important;border-bottom:none !important;transition:background-color .45s ease,box-shadow .45s ease,backdrop-filter .45s ease;}",
+    ".taj-transparent-header{position:relative !important;width:100%;z-index:99998;background:var(--soft-cream) !important;box-shadow:none !important;border-bottom:1px solid var(--border-hex) !important;}",
     ".taj-transparent-header .inner,.taj-transparent-header .main-nav-container{background:transparent !important;}",
     /* Full-width header content over hero (theme .container constrains it otherwise) */
     ".taj-transparent-header .container{max-width:100% !important;width:100% !important;padding-left:40px !important;padding-right:40px !important;}",
@@ -186,9 +186,9 @@
     ".taj-transparent-header .navbar-brand img{max-height:78px !important;}",
     /* Kill the search trigger — user asked it removed */
     ".store-header button[aria-label='Search'],.store-header [onclick*='search::open'],.store-header .sicon-search,.store-header salla-search,.store-header custom-search{display:none !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) a,.taj-transparent-header:not(.taj-scrolled) i,.taj-transparent-header:not(.taj-scrolled) button,.taj-transparent-header:not(.taj-scrolled) span,.taj-transparent-header:not(.taj-scrolled) .navbar-brand{color:var(--brand-gold) !important;}",
+    ".taj-transparent-header a,.taj-transparent-header i,.taj-transparent-header button,.taj-transparent-header .navbar-brand,.store-header a,.store-header i,.store-header button{color:var(--brand-gold) !important;}",
     ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:var(--brand-gold) !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:#fff !important;}",
+    ".taj-transparent-header custom-main-menu::part(link):hover,.taj-transparent-header i:hover,.taj-transparent-header button:hover{color:var(--brand-dark) !important;}",
     /* Logo keeps its real gold color (no white invert) */
     /* Center nav menu in header (target live web component, not theme wrapper) */
     ".store-header custom-main-menu,.store-header .taj-main-menu{position:absolute !important;left:50% !important;transform:translateX(-50%) !important;display:flex !important;justify-content:center !important;}",
@@ -286,16 +286,8 @@
     var header = document.querySelector(".store-header") ||
                  document.querySelector("header");
     if (!header) return;
+    // Header now a static solid cream bar under the ticker (no float/fade).
     header.classList.add("taj-transparent-header");
-
-    function onScroll() {
-      // Solid once scrolled ~80% through the hero.
-      var trigger = (hero.offsetHeight || window.innerHeight) * 0.8;
-      if (window.pageYOffset > trigger) header.classList.add("taj-scrolled");
-      else header.classList.remove("taj-scrolled");
-    }
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
   }
 
   /* ---------- 4. Boot ---------- */
