@@ -185,11 +185,13 @@
     ".taj-transparent-header .h-20{height:88px !important;}",
     ".taj-transparent-header .navbar-brand img{max-height:78px !important;}",
     /* Kill the search trigger — user asked it removed */
-    ".taj-transparent-header button[aria-label='Search'],.store-header button[aria-label='Search']{display:none !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) a,.taj-transparent-header:not(.taj-scrolled) i,.taj-transparent-header:not(.taj-scrolled) button,.taj-transparent-header:not(.taj-scrolled) span,.taj-transparent-header:not(.taj-scrolled) .navbar-brand{color:#fff !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:#fff !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:var(--brand-gold) !important;}",
-    ".taj-transparent-header:not(.taj-scrolled) .navbar-brand img{filter:brightness(0) invert(1);transition:filter .45s ease;}",
+    ".store-header button[aria-label='Search'],.store-header [onclick*='search::open'],.store-header .sicon-search,.store-header salla-search,.store-header custom-search{display:none !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) a,.taj-transparent-header:not(.taj-scrolled) i,.taj-transparent-header:not(.taj-scrolled) button,.taj-transparent-header:not(.taj-scrolled) span,.taj-transparent-header:not(.taj-scrolled) .navbar-brand{color:var(--brand-gold) !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:var(--brand-gold) !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:#fff !important;}",
+    /* Logo keeps its real gold color (no white invert) */
+    /* Center the nav menu horizontally in the header */
+    ".taj-transparent-header .taj-main-menu,.store-header .taj-main-menu{position:absolute;left:50%;transform:translateX(-50%);display:flex;justify-content:center;}",
     ".taj-transparent-header.taj-scrolled{background:rgba(249,247,242,0.95) !important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,0.06);border-bottom:1px solid var(--border-hex) !important;}",
     "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}.taj-transparent-header{top:40px;}}"
   ].join("\n");
