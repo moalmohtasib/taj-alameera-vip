@@ -10,7 +10,7 @@
   /* ====== Image URLs (jsDelivr CDN, from GitHub repo) ====== */
   var CDN = "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/salla-inject/media/";
   var MEDIA = {
-    heroVideo:  CDN + "hero.mp4",
+    heroWebp:   CDN + "hero.webp",
     heroPoster: CDN + "hero-poster.jpg",
     rings:    CDN + "Rings.webp",
     bracelets:CDN + "Bracelets.webp",
@@ -205,15 +205,15 @@
 
     var hero = document.createElement("div");
     hero.className = "tp-hero-wrapper";
-    // Poster as background: always paints clean, even if video autoplay
-    // is blocked (iOS Low Power Mode / battery saver / older devices).
+    // Poster as background: paints instantly and stays if the animated
+    // webp fails to load. Animated webp plays in every power mode
+    // (iOS Low Power Mode / battery saver) — no autoplay permission needed.
     hero.style.backgroundImage = "url('" + MEDIA.heroPoster + "')";
     hero.style.backgroundSize = "cover";
     hero.style.backgroundPosition = "center";
     hero.innerHTML =
-      '<video class="tp-hero-video" autoplay muted loop playsinline preload="auto" poster="' + MEDIA.heroPoster + '">' +
-        '<source src="' + MEDIA.heroVideo + '" type="video/mp4">' +
-      '</video>' +
+      '<img class="tp-hero-video" src="' + MEDIA.heroWebp + '" alt="" ' +
+        'onerror="this.style.display=\'none\'">' +
       '<div class="tp-hero-overlay"></div>' +
       '<div class="tp-hero-content">' +
         '<div class="tp-subtitle-box"><span class="tp-accent-line"></span>' +
@@ -251,18 +251,6 @@
     var main = document.querySelector("main") || document.body;
     main.insertBefore(hero, main.firstChild);
     document.body.appendChild(modal);
-
-    // Try to autoplay the hero video. If the browser blocks it
-    // (iOS Low Power Mode, battery saver, data saver, old devices),
-    // hide the <video> so the poster background paints cleanly with
-    // no ugly play button. Site looks right in every situation.
-    var heroVid = hero.querySelector(".tp-hero-video");
-    if (heroVid) {
-      var playAttempt = heroVid.play();
-      if (playAttempt && playAttempt.catch) {
-        playAttempt.catch(function () { heroVid.style.display = "none"; });
-      }
-    }
   }
 
   /* ---------- 4. Boot ---------- */
