@@ -177,7 +177,15 @@
     ".tp-list-item:hover .tp-list-img img{transform:scale(1.2);}",
     "@keyframes tpPopIn{from{opacity:0;transform:scale(0.9) translateY(40px);}to{opacity:1;transform:scale(1) translateY(0);}}",
     ".tp-modal-scroll-area::-webkit-scrollbar{width:0;}",
-    "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}}"
+    /* Transparent header over hero video (home only), fades to solid on scroll */
+    ".taj-transparent-header{position:fixed !important;top:46px;left:0;right:0;width:100%;z-index:99998;background:transparent !important;box-shadow:none !important;border-bottom:none !important;transition:background-color .45s ease,box-shadow .45s ease,backdrop-filter .45s ease;}",
+    ".taj-transparent-header .inner,.taj-transparent-header .main-nav-container{background:transparent !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) a,.taj-transparent-header:not(.taj-scrolled) i,.taj-transparent-header:not(.taj-scrolled) button,.taj-transparent-header:not(.taj-scrolled) span,.taj-transparent-header:not(.taj-scrolled) .navbar-brand{color:#fff !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:#fff !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:var(--brand-gold) !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) .navbar-brand img{filter:brightness(0) invert(1);transition:filter .45s ease;}",
+    ".taj-transparent-header.taj-scrolled{background:rgba(249,247,242,0.95) !important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,0.06);border-bottom:1px solid var(--border-hex) !important;}",
+    "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}.taj-transparent-header{top:40px;}}"
   ].join("\n");
 
   function isHome() {
@@ -251,6 +259,26 @@
     var main = document.querySelector("main") || document.body;
     main.insertBefore(hero, main.firstChild);
     document.body.appendChild(modal);
+
+    setupTransparentHeader(hero);
+  }
+
+  /* Make the store header transparent over the hero video, fade to solid
+     once the user scrolls past the hero. Home page only. */
+  function setupTransparentHeader(hero) {
+    var header = document.querySelector(".store-header") ||
+                 document.querySelector("header");
+    if (!header) return;
+    header.classList.add("taj-transparent-header");
+
+    function onScroll() {
+      // Solid once scrolled ~80% through the hero.
+      var trigger = (hero.offsetHeight || window.innerHeight) * 0.8;
+      if (window.pageYOffset > trigger) header.classList.add("taj-scrolled");
+      else header.classList.remove("taj-scrolled");
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
   /* ---------- 4. Boot ---------- */
