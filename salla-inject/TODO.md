@@ -47,7 +47,8 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
   Showed static poster on iPhone — user reported "shows as photo".
 - FIXED: dropped `<video>`, now animated webp in `<img>`. Animated webp plays
   in EVERY power mode (battery saver incl.), no autoplay permission needed.
-  Rebuilt from source: 800x450, 47 frames, q62, 498KB (under old 763KB mp4).
+  Using ORIGINAL WordPress webp (800x450, 234 frames, 4.6MB) — my re-encode
+  glitched, so restored untouched source from taj-alameera-ex/public/images.
   Poster still set as hero background = instant paint + fallback if load fails.
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 - Still to verify on device: animation smoothness + ticker/modal layout small screens.
