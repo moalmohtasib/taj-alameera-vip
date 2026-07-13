@@ -183,6 +183,9 @@
     /* Full-width header content over hero (theme .container constrains it otherwise) */
     ".taj-transparent-header .container{max-width:100% !important;width:100% !important;padding-left:40px !important;padding-right:40px !important;}",
     ".taj-transparent-header .h-20{height:88px !important;}",
+    /* Live default header row has NO .h-20 — give header a real height + stop icons stretching */
+    ".taj-transparent-header .container>div,.store-header .container>div{min-height:72px !important;align-items:center !important;}",
+    ".store-header salla-user-menu svg,.store-header salla-cart-summary svg,.store-header .s-user-menu-login-btn svg,.store-header .s-cart-summary-wrapper svg{width:24px !important;height:24px !important;}",
     ".taj-transparent-header .navbar-brand img{max-height:78px !important;}",
     /* Kill the search trigger — user asked it removed */
     ".store-header button[aria-label='Search'],.store-header [onclick*='search::open'],.store-header .sicon-search,.store-header salla-search,.store-header custom-search{display:none !important;}",
