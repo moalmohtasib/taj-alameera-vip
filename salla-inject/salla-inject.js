@@ -194,10 +194,15 @@
     ".store-header custom-main-menu,.store-header .taj-main-menu{position:absolute !important;left:50% !important;transform:translateX(-50%) !important;display:flex !important;justify-content:center !important;}",
     /* Kill white circle backgrounds behind header icons */
     ".taj-transparent-header salla-user-menu,.taj-transparent-header salla-cart-summary,.store-header salla-user-menu,.store-header salla-cart-summary{background:transparent !important;}",
+    /* Real light-DOM classes render the white circle button — kill their bg */
+    ".store-header .s-user-menu-login-btn,.store-header .s-cart-summary-wrapper,.store-header .s-cart-summary-count{background:transparent !important;box-shadow:none !important;border:none !important;}",
+    /* SVG icons have no fill attr (default black) — force gold over hero */
+    ".taj-transparent-header:not(.taj-scrolled) .s-user-menu-login-btn svg,.taj-transparent-header:not(.taj-scrolled) .s-cart-summary-wrapper svg,.taj-transparent-header:not(.taj-scrolled) svg{fill:var(--brand-gold) !important;}",
+    ".taj-transparent-header:not(.taj-scrolled) .s-cart-summary-count,.taj-transparent-header:not(.taj-scrolled) .s-cart-summary-total{color:var(--brand-gold) !important;}",
     ".store-header salla-user-menu::part(avatar),.store-header salla-user-menu::part(base),.store-header salla-user-menu::part(trigger),.store-header salla-user-menu::part(btn),.store-header salla-user-menu::part(button),.store-header salla-user-menu::part(icon),.store-header salla-cart-summary::part(base),.store-header salla-cart-summary::part(trigger),.store-header salla-cart-summary::part(btn),.store-header salla-cart-summary::part(button),.store-header salla-cart-summary::part(icon){background:transparent !important;box-shadow:none !important;border:none !important;}",
     ".taj-transparent-header:not(.taj-scrolled) .header-btn,.taj-transparent-header:not(.taj-scrolled) [class*='avatar'],.taj-transparent-header:not(.taj-scrolled) [class*='circle']{background:transparent !important;border-color:var(--brand-gold) !important;}",
     ".taj-transparent-header.taj-scrolled{background:rgba(249,247,242,0.95) !important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,0.06);border-bottom:1px solid var(--border-hex) !important;}",
-    "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}.taj-transparent-header{top:40px;}}"
+    "@media (max-width:768px){.tp-hero-wrapper{padding-top:100px;}.tp-list-text{font-size:1.4rem;margin-right:180px;}.tp-list-item:hover .tp-list-text{margin-right:160px;}.tp-modal-window{width:95%;border-radius:30px;}.taj-transparent-header{top:40px;}.taj-transparent-header .h-20{height:64px !important;}.taj-transparent-header .navbar-brand img{max-height:44px !important;}.store-header .navbar-brand{position:absolute !important;left:50% !important;transform:translateX(-50%) !important;}.taj-transparent-header .container{padding-left:16px !important;padding-right:16px !important;}}"
   ].join("\n");
 
   function isHome() {
