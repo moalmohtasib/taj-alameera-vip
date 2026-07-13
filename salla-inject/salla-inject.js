@@ -180,6 +180,12 @@
     /* Transparent header over hero video (home only), fades to solid on scroll */
     ".taj-transparent-header{position:fixed !important;top:46px;left:0;right:0;width:100%;z-index:99998;background:transparent !important;box-shadow:none !important;border-bottom:none !important;transition:background-color .45s ease,box-shadow .45s ease,backdrop-filter .45s ease;}",
     ".taj-transparent-header .inner,.taj-transparent-header .main-nav-container{background:transparent !important;}",
+    /* Full-width header content over hero (theme .container constrains it otherwise) */
+    ".taj-transparent-header .container{max-width:100% !important;width:100% !important;padding-left:40px !important;padding-right:40px !important;}",
+    ".taj-transparent-header .h-20{height:88px !important;}",
+    ".taj-transparent-header .navbar-brand img{max-height:78px !important;}",
+    /* Kill the search trigger — user asked it removed */
+    ".taj-transparent-header button[aria-label='Search'],.store-header button[aria-label='Search']{display:none !important;}",
     ".taj-transparent-header:not(.taj-scrolled) a,.taj-transparent-header:not(.taj-scrolled) i,.taj-transparent-header:not(.taj-scrolled) button,.taj-transparent-header:not(.taj-scrolled) span,.taj-transparent-header:not(.taj-scrolled) .navbar-brand{color:#fff !important;}",
     ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link){color:#fff !important;}",
     ".taj-transparent-header:not(.taj-scrolled) custom-main-menu::part(link):hover,.taj-transparent-header:not(.taj-scrolled) i:hover,.taj-transparent-header:not(.taj-scrolled) button:hover{color:var(--brand-gold) !important;}",
