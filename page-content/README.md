@@ -27,10 +27,11 @@ each page's rich-text editor (HTML/source mode) on Salla.
 | `11-terms-الشروط.html` | الشروط والأحكام | /page-1739203406 |
 
 ## ⚠️ Owner MUST review before publishing
-- **08 contact** — replace placeholder phone/WhatsApp/email/address with real ones.
+- **08 contact** — DONE: WhatsApp + real socials only (no phone/email/address).
 - **06 fatwa** — approve the text or replace with a trusted, sourced fatwa.
 - **09 privacy / 10 returns / 11 terms** — generic templates. Adapt to your real
-  practices + have them legally reviewed. Fill the `[حدد المدة]` blank in returns.
+  practices + have them legally reviewed. In returns, replace `OWNER_FILL_DAYS`
+  with the real return window (ask owner — common: 3 days).
 - **03 size guide** — verify the mm values match your actual ring sizing standard.
 
 Everything else (about, why-us, care, faq, track) is ready as-is; edit tone if wanted.
