@@ -382,6 +382,13 @@
   }
 
   /* ---------- 4. Footer ---------- */
+  // Prefix a path with the visitor's current locale segment (/ar or /en) if the
+  // page is currently under one, so footer links don't jump locale.
+  function relPage(path) {
+    var m = location.pathname.match(/^\/(ar|en)(\/|$)/);
+    return m ? "/" + m[1] + path : path;
+  }
+
   function injectFooter() {
     if (document.getElementById("taj-footer")) return;
 
@@ -394,14 +401,16 @@
       shopLinks += '<li><a href="' + CATEGORIES[i].href + '">' + CATEGORIES[i].text + '</a></li>';
     }
 
-    // Column 3 — policy pages (real custom-page IDs)
+    // Column 3 — policy pages. Use full slug URLs (same as Salla's native nav).
+    // Bare /page-ID relies on redirect + misroutes under /en/ locale. relPage()
+    // strips /ar|/en prefix so links stay on the visitor's current locale.
     var policyPages = [
-      { href: "/page-473868098",  t: "من نحن" },
-      { href: "/page-1004594508", t: "سياسة الخصوصية" },
-      { href: "/page-365757517",  t: "الاستبدال والاسترجاع" },
-      { href: "/page-1739203406", t: "الشروط والأحكام" },
-      { href: "/page-1254747476", t: "الأسئلة الشائعة" },
-      { href: "/page-789032778",  t: "تتبع طلبك" }
+      { href: relPage("/من-نحن/page-473868098"),                    t: "من نحن" },
+      { href: relPage("/سياسة-الخصوصية/page-1004594508"),           t: "سياسة الخصوصية" },
+      { href: relPage("/سياسة-الاستبدال-والاسترجاع/page-365757517"), t: "الاستبدال والاسترجاع" },
+      { href: relPage("/اتفاقية-الاستخدام-والسياسات/page-1739203406"), t: "الشروط والأحكام" },
+      { href: relPage("/الأسئلة-الشائعة/page-1254747476"),          t: "الأسئلة الشائعة" },
+      { href: relPage("/تتبع-طلبك/page-789032778"),                 t: "تتبع طلبك" }
     ];
     var policyLinks = "";
     for (var j = 0; j < policyPages.length; j++) {
@@ -483,9 +492,11 @@
       '</div>';
 
     // Replace Salla's native footer if present, else append to body.
-    var nativeFt = document.querySelector("footer.s-footer, .store-footer, footer:not(#taj-footer)");
+    // Theme sets the native footer's inline style to `display:flex !important`,
+    // so a plain `.style.display='none'` loses. Must set with 'important'.
+    var nativeFt = document.querySelector("footer.store-footer, footer.s-footer, footer:not(#taj-footer)");
     if (nativeFt && nativeFt.parentNode) {
-      nativeFt.style.display = "none";
+      nativeFt.style.setProperty("display", "none", "important");
       nativeFt.parentNode.insertBefore(ft, nativeFt.nextSibling);
     } else {
       document.body.appendChild(ft);
