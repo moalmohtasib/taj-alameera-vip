@@ -119,6 +119,27 @@
     ".content-entry blockquote{border-inline-start:3px solid var(--brand-gold) !important;background:var(--soft-cream) !important;margin:20px 0 !important;padding:14px 20px !important;border-radius:8px !important;color:#231f1e !important;}",
     "@media (max-width:768px){.content--single-page{max-width:100% !important;margin:16px 12px 32px !important;padding:24px 18px 36px !important;border-radius:12px !important;}.content--single-page>h1{font-size:24px !important;}.content-entry{font-size:15px !important;line-height:1.9 !important;}.content-entry table{font-size:13px !important;}.content-entry table th,.content-entry table td{padding:10px 10px !important;}}",
     ".mm-ocd,.mm-ocd--open,.mm-ocd__content,.mm-slideout,#mobile-menu,.mobile-menu{z-index:9999999 !important;}",
+    "/* ---- FAQ accordion (built by setupFaq on the FAQ page) ---- */",
+    ".taj-faq{margin:8px 0 0 !important;}",
+    ".taj-faq-item{border:1px solid var(--border-hex) !important;border-radius:12px !important;margin:0 0 14px !important;background:#fff !important;overflow:hidden !important;transition:box-shadow .25s ease,border-color .25s ease !important;}",
+    ".taj-faq-item.open{border-color:var(--brand-gold) !important;box-shadow:0 6px 22px rgba(197,160,89,0.10) !important;}",
+    ".taj-faq-q{all:unset !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:16px !important;width:100% !important;box-sizing:border-box !important;cursor:pointer !important;padding:18px 22px !important;font-family:'Almarai',sans-serif !important;font-size:17px !important;font-weight:700 !important;color:var(--brand-dark) !important;line-height:1.6 !important;}",
+    ".taj-faq-item.open .taj-faq-q{color:var(--brand-gold) !important;}",
+    ".taj-faq-ic{flex:0 0 auto !important;width:22px !important;height:22px !important;position:relative !important;}",
+    ".taj-faq-ic::before,.taj-faq-ic::after{content:'' !important;position:absolute !important;background:var(--brand-gold) !important;border-radius:2px !important;transition:transform .3s ease,opacity .3s ease !important;}",
+    ".taj-faq-ic::before{top:50% !important;left:2px !important;right:2px !important;height:2.4px !important;transform:translateY(-50%) !important;}",
+    ".taj-faq-ic::after{left:50% !important;top:2px !important;bottom:2px !important;width:2.4px !important;transform:translateX(-50%) !important;}",
+    ".taj-faq-item.open .taj-faq-ic::after{transform:translateX(-50%) scaleY(0) !important;opacity:0 !important;}",
+    ".taj-faq-a{max-height:0 !important;overflow:hidden !important;transition:max-height .35s ease !important;}",
+    ".taj-faq-a-inner{padding:0 22px 20px !important;font-family:'Almarai',sans-serif !important;font-size:15.5px !important;line-height:2 !important;color:#231f1e !important;}",
+    ".taj-faq-a-inner p:first-child{margin-top:0 !important;}",
+    ".taj-faq-a-inner p:last-child{margin-bottom:0 !important;}",
+    "@media (max-width:768px){.taj-faq-q{font-size:15.5px !important;padding:15px 16px !important;}.taj-faq-a-inner{padding:0 16px 16px !important;font-size:14.5px !important;}}",
+    "/* ---- Contact page WhatsApp CTA (styled by setupContact) ---- */",
+    ".taj-wa-cta{display:flex !important;align-items:center !important;justify-content:center !important;gap:12px !important;max-width:420px !important;margin:28px auto 8px !important;padding:18px 28px !important;background:#25D366 !important;color:#fff !important;font-family:'Almarai',sans-serif !important;font-size:18px !important;font-weight:800 !important;text-decoration:none !important;border-radius:50px !important;box-shadow:0 10px 30px rgba(37,211,102,0.30) !important;transition:transform .3s cubic-bezier(0.2,1,0.3,1),box-shadow .3s ease !important;}",
+    ".taj-wa-cta:hover{transform:translateY(-4px) !important;box-shadow:0 18px 40px rgba(37,211,102,0.40) !important;}",
+    ".taj-wa-cta svg{width:26px !important;height:26px !important;fill:#fff !important;flex:0 0 auto !important;}",
+    ".taj-wa-note{text-align:center !important;color:var(--text-muted) !important;font-size:14px !important;margin:10px auto 0 !important;font-family:'Almarai',sans-serif !important;}",
     "/* ---- TAJ custom footer (light luxury) ---- */",
     "/* Backstop: hide Salla native footer from first paint (JS also re-hides). */",
     "footer.store-footer,footer.s-footer{display:none !important;}",
@@ -526,13 +547,140 @@
     }, 200);
   }
 
-  /* ---------- 5. Boot ---------- */
+  /* ---------- 5. FAQ accordion + Contact CTA (custom pages) ---------- */
+  // Match a custom page by its Salla page-ID (locale-safe: matches under /ar,
+  // /en, or the pretty Arabic-slug URL, since the ID always trails the path).
+  function onPage(id) {
+    return location.pathname.indexOf("page-" + id) !== -1;
+  }
+
+  // Find the pasted content body of a static page.
+  function contentEntry() {
+    return document.querySelector(".content-entry") ||
+           document.querySelector(".content--single-page");
+  }
+
+  // FAQ page: turn pasted "heading + answer" pairs into a collapsible accordion.
+  // Pure additive + idempotent. If no headings found, leaves content untouched.
+  function setupFaq() {
+    if (!onPage("1254747476")) return;
+    var entry = contentEntry();
+    if (!entry || entry.getAttribute("data-taj-faq") === "1") return;
+
+    var nodes = Array.prototype.slice.call(entry.childNodes);
+    var heads = entry.querySelectorAll("h2, h3, h4");
+    if (!heads.length) return; // plain content — do nothing
+
+    var tag = heads[0].tagName; // group on the top heading level present
+    var acc = document.createElement("div");
+    acc.className = "taj-faq";
+
+    var cur = null;          // current answer buffer (DocumentFragment)
+    var curQ = null;         // current question text
+    var built = 0;
+
+    function flush() {
+      if (curQ === null) return;
+      var item = document.createElement("div");
+      item.className = "taj-faq-item";
+
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "taj-faq-q";
+      btn.innerHTML = curQ + '<span class="taj-faq-ic" aria-hidden="true"></span>';
+
+      var ans = document.createElement("div");
+      ans.className = "taj-faq-a";
+      var inner = document.createElement("div");
+      inner.className = "taj-faq-a-inner";
+      if (cur) inner.appendChild(cur);
+      ans.appendChild(inner);
+
+      btn.addEventListener("click", function () {
+        var open = item.classList.toggle("open");
+        ans.style.maxHeight = open ? inner.scrollHeight + 40 + "px" : "0px";
+      });
+
+      item.appendChild(btn);
+      item.appendChild(ans);
+      acc.appendChild(item);
+      built++;
+      cur = null;
+      curQ = null;
+    }
+
+    for (var i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+      if (n.nodeType === 1 && n.tagName === tag) {
+        flush();
+        curQ = n.innerHTML;
+        cur = document.createDocumentFragment();
+      } else if (curQ !== null) {
+        // Only buffer real content once a question has opened.
+        if (n.nodeType === 1 || (n.nodeType === 3 && n.textContent.trim())) {
+          cur.appendChild(n.cloneNode(true));
+        }
+      }
+    }
+    flush();
+
+    if (!built) return; // nothing groupable — bail without touching DOM
+    entry.setAttribute("data-taj-faq", "1");
+    entry.innerHTML = "";
+    entry.appendChild(acc);
+  }
+
+  // Contact page: inject a big WhatsApp CTA button using the footer's WA link.
+  function setupContact() {
+    if (!onPage("1987259222")) return;
+    if (!FOOTER.whatsapp) return;
+    var entry = contentEntry();
+    if (!entry || document.getElementById("taj-wa-cta")) return;
+
+    var WA_SVG =
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
+    var cta = document.createElement("a");
+    cta.id = "taj-wa-cta";
+    cta.className = "taj-wa-cta";
+    cta.href = FOOTER.whatsapp;
+    cta.target = "_blank";
+    cta.rel = "noopener";
+    cta.innerHTML = WA_SVG + '<span>تواصلي معنا عبر واتساب</span>';
+
+    var note = document.createElement("p");
+    note.className = "taj-wa-note";
+    note.textContent = "نردّ على استفساراتكِ خلال ساعات العمل بإذن الله.";
+
+    entry.appendChild(cta);
+    entry.appendChild(note);
+  }
+
+  /* ---------- 6. Boot ---------- */
   function boot() {
     injectStyles();
     TajGoldTicker.start();
     injectHome();
     setupHeader();
     injectFooter();
+    enhancePages();
+  }
+
+  // Custom-page enhancers run on late-hydrating Salla content. Retry a few
+  // times over the first ~3s until the .content-entry paints. Both are
+  // idempotent (data-attr / id guards), so extra calls are no-ops.
+  function enhancePages() {
+    setupFaq();
+    setupContact();
+    if (!onPage("1254747476") && !onPage("1987259222")) return;
+    var n = 0, iv = setInterval(function () {
+      setupFaq();
+      setupContact();
+      var done = (!onPage("1254747476") ||
+                   (contentEntry() && contentEntry().getAttribute("data-taj-faq") === "1")) &&
+                 (!onPage("1987259222") || document.getElementById("taj-wa-cta"));
+      if (done || ++n >= 15) clearInterval(iv);
+    }, 200);
   }
 
   if (document.readyState === "loading") {

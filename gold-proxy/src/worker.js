@@ -1,19 +1,22 @@
-import puppeteer from "@cloudflare/puppeteer";
-
 /**
- * Taj Gold Proxy
- * - Cron (every 1 min): headless Chrome opens dewanaldahab, reads the rendered
- *   gram prices (#caret24/21/18_Price data-price), stores JSON in KV.
- * - fetch: serves the cached JSON with CORS open. Never runs the browser on a
- *   user request, so the storefront stays fast and cheap.
+ * Taj Gold Proxy — Option A (pure spot math, no headless browser)
+ *
+ * Saudi has no central gold authority. Every dealer prices gold as:
+ *     gram_SAR = (spot_USD_per_oz / 31.1034768) * (karat/24) * USD_SAR_peg
+ * The USD->SAR peg is fixed at 3.75 by SAMA and never floats.
+ *
+ * - Cron (every 1 min): fetch spot XAU/USD, compute 24/21/18k SAR gram prices,
+ *   store JSON in KV.
+ * - fetch: serve cached JSON with CORS open. Never calls the upstream API on a
+ *   visitor request, so the storefront stays fast and within rate limits.
+ *
+ * Output payload is byte-compatible with the previous scrape version, so the
+ * storefront inject needs no change.
  */
 
 const CACHE_KEY = "gold_prices";
-const SELECTORS = {
-  "24k": "#caret24_Price",
-  "21k": "#caret21_Price",
-  "18k": "#caret18_Price",
-};
+const OZ_TO_GRAM = 31.1034768; // troy ounce -> gram
+const KARATS = { "24k": 24, "21k": 21, "18k": 18 };
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -32,7 +35,7 @@ export default {
 
     // Manual refresh endpoint for testing: /refresh
     if (url.pathname === "/refresh") {
-      const data = await scrape(env);
+      const data = await computeAndCache(env);
       return json(data, data.ok ? 200 : 502);
     }
 
@@ -45,81 +48,40 @@ export default {
     });
   },
 
-  // --- Cron: scrape + cache ------------------------------------------------
+  // --- Cron: compute + cache ----------------------------------------------
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(scrape(env));
+    ctx.waitUntil(computeAndCache(env));
   },
 };
 
-async function scrape(env) {
-  let browser;
+async function computeAndCache(env) {
   try {
-    browser = await puppeteer.launch(env.BROWSER);
-    const page = await browser.newPage();
-    await page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
-    );
-
-    // Blazor Server keeps a persistent SSE/long-poll connection open, so the
-    // network never goes idle. Use domcontentloaded and rely on waitForFunction
-    // to detect when prices have actually rendered.
-    await page.goto(env.SOURCE_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
-
-    // Wait until the 24k price element has a real data-price value.
-    try {
-      await page.waitForFunction(
-        (sel) => {
-          const el = document.querySelector(sel);
-          if (!el) return false;
-          const v = el.getAttribute("data-price");
-          return v && parseFloat(v) > 0;
-        },
-        { timeout: 40000, polling: 500 },
-        SELECTORS["24k"]
-      );
-    } catch (waitErr) {
-      // Capture diagnostics: does the element exist at all? what does it hold?
-      const diag = await page.evaluate((sel) => {
-        const el = document.querySelector(sel);
-        return {
-          exists: !!el,
-          dataPrice: el ? el.getAttribute("data-price") : null,
-          text: el ? (el.textContent || "").trim().slice(0, 60) : null,
-          bodyLen: document.body ? document.body.innerHTML.length : 0,
-        };
-      }, SELECTORS["24k"]).catch(() => null);
-      throw new Error("price wait timeout; diag=" + JSON.stringify(diag));
+    const spot = await fetchSpotUsdPerOz(env);
+    if (!(typeof spot === "number" && spot > 0)) {
+      throw new Error("bad spot value: " + JSON.stringify(spot));
     }
 
-    // NOTE: no inner named functions here. esbuild/wrangler wraps named
-    // functions with a __name() helper that does not exist in the page
-    // context, causing "__name is not defined". Keep this body flat.
-    const prices = await page.evaluate((selectors) => {
-      const out = {};
-      for (const k in selectors) {
-        const el = document.querySelector(selectors[k]);
-        let v = null;
-        if (el) {
-          const attr = el.getAttribute("data-price");
-          v = attr ? parseFloat(attr) : parseFloat((el.textContent || "").replace(/[^\d.]/g, ""));
-          if (isNaN(v)) v = null;
-        }
-        out[k] = v;
-      }
-      return out;
-    }, SELECTORS);
+    const peg = parseFloat(env.USD_SAR_PEG || "3.75");
+    const premium = parseFloat(env.MARKET_PREMIUM || "1"); // multiplier, 1 = pure spot
 
-    await browser.close();
-    browser = null;
+    const prices = {};
+    for (const key in KARATS) {
+      const purity = KARATS[key] / 24;
+      const gram = (spot / OZ_TO_GRAM) * purity * peg * premium;
+      prices[key] = Math.round(gram * 100) / 100; // 2 decimals
+    }
 
-    // Validate we got real numbers.
-    const valid = ["24k", "21k", "18k"].every((k) => typeof prices[k] === "number" && prices[k] > 0);
-    if (!valid) throw new Error("scrape returned empty/invalid prices: " + JSON.stringify(prices));
+    const valid = ["24k", "21k", "18k"].every(
+      (k) => typeof prices[k] === "number" && prices[k] > 0
+    );
+    if (!valid) throw new Error("computed invalid prices: " + JSON.stringify(prices));
 
     const payload = {
       ok: true,
-      source: "dewanaldahab.com",
+      source: "spot XAU/USD x SAR peg 3.75",
       unit: "SAR_per_gram",
+      spot_usd_oz: Math.round(spot * 100) / 100,
+      peg: peg,
       prices,
       time: new Date().toISOString(),
       stale: false,
@@ -128,9 +90,6 @@ async function scrape(env) {
     await env.GOLD_KV.put(CACHE_KEY, JSON.stringify(payload));
     return payload;
   } catch (err) {
-    if (browser) {
-      try { await browser.close(); } catch {}
-    }
     // On failure, mark last-good as stale so the bar still shows something.
     const cached = await env.GOLD_KV.get(CACHE_KEY);
     if (cached) {
@@ -142,6 +101,21 @@ async function scrape(env) {
     }
     return { ok: false, error: String(err.message || err) };
   }
+}
+
+// Fetch spot gold price in USD per troy ounce.
+// Primary: gold-api.com (keyless). Returns { price: <usd_per_oz>, ... }.
+async function fetchSpotUsdPerOz(env) {
+  const url = env.SPOT_URL || "https://api.gold-api.com/price/XAU";
+  const res = await fetch(url, {
+    headers: { "User-Agent": "taj-gold-proxy", Accept: "application/json" },
+    cf: { cacheTtl: 0 },
+  });
+  if (!res.ok) throw new Error("spot fetch HTTP " + res.status);
+  const data = await res.json();
+  const price = parseFloat(data.price);
+  if (isNaN(price)) throw new Error("spot payload missing price: " + JSON.stringify(data));
+  return price;
 }
 
 function json(obj, status = 200) {

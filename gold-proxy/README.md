@@ -1,8 +1,13 @@
 # Taj Gold Proxy (Cloudflare Worker)
 
-Scrapes gold gram prices (24k/21k/18k) from **dewanaldahab.com/ar** every 1 minute
-using headless Chrome, caches them in KV, and serves clean JSON with CORS open so
-the Salla storefront can `fetch()` them.
+Computes Saudi gold gram prices (24k/21k/18k) every 1 minute from the live spot
+XAU/USD price and the SAMA-fixed USD->SAR peg (3.75), caches them in KV, and
+serves clean JSON with CORS open so the Salla storefront can `fetch()` them.
+
+**Why this method (Option A):** Saudi Arabia has no central gold authority. Every
+dealer prices gold as `(spot_USD/oz ÷ 31.1035) × (karat/24) × 3.75`. Computing it
+ourselves = the true market price, independent of any one dealer site, with no
+fragile headless-browser scrape.
 
 Endpoint after deploy:
 
@@ -15,10 +20,12 @@ Returns:
 ```json
 {
   "ok": true,
-  "source": "dewanaldahab.com",
+  "source": "spot XAU/USD x SAR peg 3.75",
   "unit": "SAR_per_gram",
-  "prices": { "24k": 482.10, "21k": 421.80, "18k": 361.55 },
-  "time": "2026-07-12T10:00:00.000Z",
+  "spot_usd_oz": 4030.60,
+  "peg": 3.75,
+  "prices": { "24k": 485.95, "21k": 425.21, "18k": 364.46 },
+  "time": "2026-07-15T10:00:00.000Z",
   "stale": false
 }
 ```
@@ -28,8 +35,8 @@ Returns:
 ## Requirements
 
 - Cloudflare account.
-- **Workers Paid plan** ($5/mo minimum) — Browser Rendering needs it. This is the only
-  cost. No VPS, no domain required.
+- Free Workers plan is enough — Option A uses a plain `fetch()`, no Browser
+  Rendering. (If you keep the existing Paid plan it also works; not required.)
 - Node.js installed locally (to run wrangler).
 
 ---
@@ -62,12 +69,7 @@ Copy that id.
 ### 4. Paste the KV id
 Open `wrangler.toml`, replace `PASTE_KV_ID_HERE` with the id from step 3.
 
-### 5. Enable Browser Rendering
-- Cloudflare dashboard → your account → **Workers & Pages** → **Plans** → upgrade to
-  **Workers Paid** if not already.
-- Browser Rendering is included; the `browser` binding in `wrangler.toml` wires it up.
-
-### 6. Deploy
+### 5. Deploy
 ```bash
 npm run deploy
 ```
@@ -78,7 +80,7 @@ Wrangler prints your live URL, e.g.
 
 ## Test it
 
-Force an immediate scrape (bypasses waiting for the cron):
+Force an immediate recompute (bypasses waiting for the cron):
 ```bash
 curl "https://taj-gold-proxy.yourname.workers.dev/refresh"
 ```
@@ -96,17 +98,25 @@ npm run tail
 
 ## How it stays cheap + reliable
 
-- Browser only runs on the **cron** (1/min) and on `/refresh`, never on visitor requests.
-- Visitors hit KV cache only — instant, near-free.
-- If dewanaldahab is down or changes markup, the proxy keeps serving the last good value
-  with `"stale": true`, so the storefront bar never goes blank.
+- One tiny `fetch()` to the spot feed on the **cron** (1/min) and on `/refresh`,
+  never on visitor requests.
+- Visitors hit KV cache only — instant, near-free. Free Workers plan covers it.
+- If the spot feed is down, the proxy keeps serving the last good value with
+  `"stale": true`, so the storefront bar never goes blank.
 
 ---
 
-## If they change their site
+## Tuning knobs (wrangler.toml [vars])
 
-The scrape targets these element IDs on dewanaldahab:
-`#caret24_Price`, `#caret21_Price`, `#caret18_Price` (reads their `data-price` attribute).
+- `SPOT_URL` — spot XAU/USD feed (USD per troy ounce). Default: gold-api.com (keyless).
+  Swap for any JSON endpoint that returns `{ "price": <usd_per_oz> }`.
+- `USD_SAR_PEG` — SAMA-fixed peg, `3.75`. Constant; do not change unless SAMA re-pegs.
+- `MARKET_PREMIUM` — multiplier over bare spot. `1` = pure bullion price. Bump to
+  e.g. `1.02` to mirror a local retail markup if the owner wants the bar to match
+  street dealers instead of pure spot.
 
-If prices stop updating, open dewanaldahab.com/ar in a browser, inspect the price
-elements, and update `SELECTORS` in `src/worker.js`.
+## If the spot feed changes shape
+
+The worker reads `data.price` (USD per troy ounce) from `SPOT_URL`. If that feed
+changes its JSON key or goes away, point `SPOT_URL` at another feed and adjust the
+`data.price` read in `fetchSpotUsdPerOz()` in `src/worker.js`.
