@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تعبئة بيانات المنتجات — تاج الأميرة</title>
+<style>
+  body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:#F9F7F2;color:#1d2939;
+       max-width:900px;margin:0 auto;padding:32px 22px;line-height:1.9;}
+  h1{color:#0B0B0B;font-size:26px;border-bottom:3px solid #C5A059;padding-bottom:10px;}
+  h2{color:#0B0B0B;font-size:20px;margin-top:34px;background:#fff;border-right:4px solid #C5A059;
+     padding:10px 14px;border-radius:8px;}
+  table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:10px;overflow:hidden;font-size:14px;}
+  th{background:#0B0B0B;color:#C5A059;padding:10px;text-align:right;}
+  td{padding:10px;border-bottom:1px solid #E6E8EB;vertical-align:top;}
+  td:first-child{font-weight:700;color:#0B0B0B;width:34%;}
+  .fill{color:#C5A059;font-weight:700;}
+  .req{color:#B42318;font-weight:700;}
+  .note{background:#fff;border:1px solid #C5A059;border-radius:10px;padding:14px 18px;margin:14px 0;font-size:15px;}
+  .en{direction:ltr;text-align:left;font-family:monospace;color:#667085;font-size:12px;}
+  .ex{color:#12805c;}
+</style>
+</head>
+<body>
+
+<h1>تعبئة بيانات المنتجات</h1>
+<p>لكل منتج انسخي الجدول التالي وعبّيه. الحقول المعلّمة <span class="req">(مطلوب)</span> ضرورية عشان يُحسب السعر ويُنشر المنتج. الباقي اختياري.</p>
+
+<div class="note">
+  <b>السعر يتحسّب تلقائي — لا تكتبي سعر نهائي.</b><br>
+  المعادلة: (الوزن بالجرام × سعر جرام الذهب اليوم حسب العيار) + المصنعية + ضريبة ١٥٪.<br>
+  انتِ بس تعطينا: <b>العيار + الوزن + المصنعية</b> — والنظام يجيب الباقي من سعر الذهب اللحظي.
+</div>
+
+<h2>منتج رقم ١ (كرري الجدول لكل منتج)</h2>
+<table>
+  <tr><th>الحقل</th><th>القيمة (اكتبيها)</th></tr>
+  <tr><td>رقم المنتج <span class="en">(نفس رقم مجلد الصور)</span></td><td class="fill">..........</td></tr>
+  <tr><td>الاسم (عربي) <span class="req">مطلوب</span></td><td class="fill">.................... <span class="ex">مثال: خاتم عيار ٢١ ضفيرة</span></td></tr>
+  <tr><td>الاسم (انجليزي)</td><td class="fill">.................... <span class="en">e.g. 21K Twist Ring</span></td></tr>
+  <tr><td>التصنيف <span class="req">مطلوب</span></td><td class="fill">.......... <span class="ex">خواتم / أساور / قلائد / أقراط</span></td></tr>
+  <tr><td>العيار <span class="req">مطلوب</span></td><td class="fill">.......... <span class="ex">٢٤ / ٢١ / ١٨</span></td></tr>
+  <tr><td>لون الذهب</td><td class="fill">.......... <span class="ex">أصفر / أبيض / وردي</span></td></tr>
+  <tr><td>الوزن بالجرام <span class="req">مطلوب</span></td><td class="fill">.......... جرام <span class="ex">مثال: 5.20</span></td></tr>
+  <tr><td>نوع المصنعية <span class="req">مطلوب</span></td><td class="fill">.......... <span class="ex">لكل جرام &nbsp;أو&nbsp; مبلغ ثابت</span></td></tr>
+  <tr><td>قيمة المصنعية <span class="req">مطلوب</span></td><td class="fill">.......... ريال <span class="ex">مثال: 35 لكل جرام، أو 500 ثابت</span></td></tr>
+  <tr><td>الأحجار (إن وجدت)</td><td class="fill">.......... <span class="ex">نوع + عدد/قيراط + قيمة بالريال</span></td></tr>
+  <tr><td>المقاس</td><td class="fill">.......... <span class="ex">للخواتم</span></td></tr>
+  <tr><td>الكمية المتوفرة</td><td class="fill">..........</td></tr>
+  <tr><td>SKU (اختياري)</td><td class="fill">..........</td></tr>
+  <tr><td>الوصف (عربي)</td><td class="fill">....................</td></tr>
+  <tr><td>ملاحظات</td><td class="fill">....................</td></tr>
+</table>
+
+<div class="note">
+  <b>طرق سريعة للتعبئة:</b> لو عندك منتجات كثيرة، عبّي ملف Google Sheets الجاهز
+  (<span class="en">OWNER-PRODUCT-DATA</span>) بدل تكرار الجدول — صف واحد لكل منتج بنفس هذه الحقول.
+</div>
+
+</body>
+</html>

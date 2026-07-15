@@ -1,0 +1,21 @@
+name = "taj-gold-proxy"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Browser Rendering binding (headless Chrome). Requires Workers Paid plan ($5/mo min).
+browser = { binding = "BROWSER" }
+
+# KV namespace stores the last scraped prices. Create it once with:
+#   npx wrangler kv namespace create GOLD_KV
+# then paste the returned id below.
+[[kv_namespaces]]
+binding = "GOLD_KV"
+id = "3a8ce9f0412f4fe2b96f1b5a5d4c22ac"
+
+# Scrape every 1 minute.
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+SOURCE_URL = "https://dewanaldahab.com/ar"

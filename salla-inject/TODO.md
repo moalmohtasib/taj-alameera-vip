@@ -53,36 +53,131 @@ CDN base: `https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/sall
 - REQUIRES RE-PASTE of salla-inject.js into Salla panel.
 - Still to verify on device: animation smoothness + ticker/modal layout small screens.
 
-### 6. Header  🔧 IN PROGRESS (finish tomorrow)
-- Live store runs Salla DEFAULT header, NOT the twig (logo left, menu inline,
-  components render in LIGHT DOM `hydrated` — no shadow root, so `::part()` useless).
-- TRIED solid cream bar (`position:relative;background:soft-cream`) — user said
-  header + everything above it to top bar showed as WHITE bg. Felt off.
-- CURRENT state (commit b0bec0c): reverted to TRANSPARENT-over-hero.
-  `.taj-transparent-header{position:absolute;top:46px;left:0;background:transparent;
-  border-bottom:none}`. Gold logo+icons float over dark hero. No white bar.
-- Line refs (salla-inject.js): header block ~181-208, setupTransparentHeader ~289-293.
-- Icons gold via `.store-header i/a/button{color:brand-gold}` (cart = font
-  `<i class="sicon-shopping-bag">`, login = svg no-fill). Hover → brand-dark.
-- White circle killed via REAL classes: `.s-user-menu-login-btn`, `.s-cart-summary-wrapper`,
-  `.s-cart-summary-count` (bg transparent). svg fill → gold. svg clamped 24px.
-- Row height: `.container>div{min-height:72px;align-items:center}` (live row has no `.h-20`,
-  uses `items-stretch` — was stretching login svg huge).
-- Menu centered: `.store-header custom-main-menu{position:absolute;left:50%;translateX(-50%)}`.
-- Search removed. Mobile: logo 44px centered, container 16px pad (@media ≤768px).
-- Commits: 9e579ed, 03251b6, 12b5554, 3df6f5b, 3a89081, a6e60f0, b0bec0c.
-- REQUIRES RE-PASTE of salla-inject.js into Salla panel, then screenshot to verify.
+### 6. Header  ✅ FIXED + VERIFIED (Playwright, mobile iPhone 13)
+- Live store runs Salla DEFAULT header, NOT the twig. `.taj-hdr` class on
+  `HEADER.store-header`; `#mainnav` is INSIDE it (theme sets `#mainnav` inline
+  `height:84px;bg:white` on inner pages — neutralized by `.taj-hdr #mainnav{...}`).
+
+- ROOT CAUSE of all "inner page white / gray icons / static position" pain:
+  the whole header CSS block was living in the HOME_CSS array, which
+  `injectHome()` only injects on home (returns early elsewhere). Inner pages got
+  the `.taj-hdr .taj-solid` CLASSES but ZERO css backing them → theme defaults
+  (position:static, cart gray rgb(55,65,81), height 136px, gap normal).
+  FIX: moved entire header block into the GLOBAL `CSS` array (lines ~54-78),
+  which `injectStyles()` runs on EVERY page. Now 44 rules parse on both pages.
+
+- SYSTEM (coherent, replaced 47 tangled overrides): ONE base `.taj-hdr` +
+  `.taj-solid` modifier. Sizes via CSS vars `--tk --hdr-h --icon --gap`
+  (desktop 46/72/24/20, mobile 40/60/22/16 @≤768px).
+  - Home top: base = transparent absolute over hero.
+  - Home scroll: base + `.taj-solid` (fixed cream under ticker, scroll listener).
+  - Inner pages: base + `.taj-solid` (fixed cream under ticker) + body
+    `.taj-inner-page` padding-top = tk+hdr-h so content clears fixed header.
+  - `setupHeader()` (JS ~306-330): adds `.taj-hdr`; home wires scroll toggle,
+    inner pages add `.taj-solid` + body class directly.
+- Icons: cart is icon-FONT `.sicon-shopping-bag` (size via font-size:var(--icon),
+  color gold), user is 32px svg (width/height:var(--icon), fill gold). Both gold
+  in ALL states, hover → brand-dark. White circle killed on
+  `.s-user-menu-login-btn / .s-cart-summary-wrapper / #s-cart-icon /
+  .header-btn__icon` (bg transparent, no border/radius/shadow).
+- `.top-navbar` (Salla native search+contacts bar = the "gap" source) hidden.
+  Search hidden. Menu centered via `custom-main-menu{position:absolute;left:50%}`.
+- Mobile burger: menu z-index 9999999 > header 99998 so it covers header (no
+  more "menu under header"). No display:none hide (that made header vanish).
+
+- VERIFIED via /tmp/taj-shots/run.js (system Chrome, iPhone 13, real computed
+  styles, OLD deployed inject stripped first so fresh code runs):
+    Home     → taj-hdr, position absolute, top 40, height 60, cart GOLD, gap 16.
+    Category → taj-hdr taj-solid, position FIXED, top 40, height 61, cart GOLD,
+               gap 16. IDENTICAL to home. (before fix: static/gray/136/normal.)
+- Commits: 9e579ed, 03251b6, 12b5554, 3df6f5b, 3a89081, a6e60f0, b0bec0c, +rebuild.
+- ⚠️ REQUIRES RE-PASTE of salla-inject.js into Salla panel (old build still live
+  there — that's why the harness had to strip it first to test).
+
+### 7. Header polish + scroll removal  ✅ DONE + VERIFIED (desktop 1440 + mobile iPhone13)
+- Menu items were BLACK → now GOLD. Root: targeted shadow `::part(link)` (dead,
+  menu is LIGHT dom). Fixed via real selectors `.taj-hdr custom-main-menu a` +
+  `#mainnav .menu a` + `.main-menu a` → gold, hover brand-dark. Nudged +4px down
+  (`custom-main-menu{margin-top:4px}`).
+- Burger was ORANGE rgb(255,191,105) → now GOLD. Rules `.taj-hdr .mburger,
+  .mburger *, a[aria-label*='menu'], .sicon-menu {color/fill:gold}`; icon sized
+  `font-size:var(--icon)`.
+- Mobile header rebalanced: `.container>div{justify-content:space-between}`,
+  logo centered absolute, burger left z2, icons right z2, gap var(--gap).
+- SCROLL HEADER REMOVED entirely (user: "we do not need on scrol header").
+  - `setupHeader()` (~318-327): NO scroll listener, NO toggle. Home = base only
+    (transparent). Inner = `.taj-solid` + body `.taj-inner-page` directly.
+  - `.taj-hdr` AND `.taj-hdr.taj-solid` both `position:absolute` (was fixed) →
+    header SCROLLS AWAY with page, not pinned.
+  - Home stays TRANSPARENT top+scroll (user corrected: home must be transparent).
+- LIVE SITE re-check (live.js, no strip): live store ALREADY runs latest header
+  code (injectLen 7029, position absolute, scrolls away). User's "scroll header
+  still there" sightings = BROWSER CACHE. Advised hard-refresh/incognito.
+
+### 8. Full 15-page × 2-device audit  ✅ DONE (full.js)
+- All 11 custom pages + product/cart/categories: inject running, ticker top:0,
+  home header transparent, all inner cream taj-solid absolute, body padding
+  mobile 100px / desktop 118px clears content. Custom pages AUTO-WIRED by
+  site-wide inject (ticker+header+font apply, no per-page code needed).
+- Discovered all 11 custom page IDs (discover.js). See list bottom.
+
+### 9. Custom-page CONTENT styling  ✅ DONE + VERIFIED (desktop+mobile)
+- FINDING: all 11 custom pages are EMPTY SHELLS — each `.content-entry` holds
+  only `<p>title</p>`. Merchant published pages, never wrote body content yet.
+- Wrapper = `.content--single-page` (Salla static-page container), body =
+  `.content-entry`. Added brand CSS block (CSS array ~80-102) so future content
+  auto-brands:
+  - Card: max 920px centered, white, radius 16px, soft shadow, cream page bg.
+  - H1: 30px w800 dark + gold underline accent. Body Almarai 16px lh2.
+  - Gold links, gold list markers, full table styling (cream head/gold underline/
+    striped/rounded), blockquote gold accent, responsive imgs.
+  - Mobile @≤768: full-width card, 24px H1, tighter padding, 13px table.
+- Verified strip-and-inject on About page: 69 rules parse, all applied both devices.
+
+### 10. Boutique modal small-screen  ✅ DONE + VERIFIED (390px + 360px)
+- Was: item 130px tall (650px total forces scroll), img 300px, list pad 40px.
+- Refined HOME_CSS mobile queries (lines ~238-239):
+  - @≤768: item 96px, img 190px, list pad 22px, header/close tightened, 82vh.
+  - @≤390: item 84px, img 160px, list pad 16px, text 1.15rem.
+- Verified: no overflow (img right 383<390 / 354<360), 5 items fit no scroll.
+
+### 11. Ticker numbers  ✅ VERIFIED (no change)
+- Live proxy `taj-gold-proxy...workers.dev` → dewanaldahab.com: 24k 492.44 /
+  21k 430.08 / 18k 368.42, stale:false. Browser renders EXACT values + gold
+  arrows + Riyadh Arabic time. 60s refresh confirmed. Source loads via JS
+  (TradingView) so can't diff statically, but proxy stale:false = fresh.
 
 ### TOMORROW — pick up here
-- Verify transparent header renders right over hero (re-paste + screenshot).
-- If white STILL above header: not header — it's page body/main bg between ticker
-  and hero. Check `main`/body bg, may need `background:var(--brand-dark)` on wrapper.
-- Then broader MOBILE checkup — user: "on mobile too many things wrong".
-  Check: ticker, burger menu, hero animation, category modal on small screens.
+- RE-PASTE salla-inject.js into Salla panel (deploy step for all above).
+- Remaining: hero Arabic copy final sign-off; full checkout/cart/wishlist test
+  pass; merchant to fill custom-page BODY content (then style specifics:
+  size-guide table, FAQ accordions, contact form).
 
 ### 5. Content polish  (priority: LOW)
 - Hero text hardcoded Arabic. Confirm final copy.
 - Category Arabic labels: خواتم/أساور/سلاسل/أطفال/سبائك — confirm match store categories.
+
+### CUSTOM PAGE IDS (all published, empty shells)
+- من نحن (About): /page-473868098
+- لماذا تاج الأميرة (Why us): /page-1847313987
+- سياسة الخصوصية (Privacy): /page-1004594508
+- سياسة الاستبدال والاسترجاع (Returns): /page-365757517
+- اتفاقية الاستخدام والسياسات (Terms): /page-1739203406
+- دليل مقاسات الخواتم (Size guide): /page-829899343
+- العناية بالمجوهرات (Care): /page-1564115017
+- تتبع طلبك (Track): /page-789032778
+- الأسئلة الشائعة (FAQ): /page-1254747476
+- حكم شراء الذهب أون لاين (Fatwa): /page-613813333
+- تواصل معنا (Contact): /page-1987259222
+
+### VERIFY HARNESSES (/tmp/taj-shots/)
+- run.js — header verify desktop+mobile (strips old inject, probes menu/burger/scroll/sticky)
+- live.js — live-site AS-IS inspector (no strip)
+- discover.js — internal link discovery
+- full.js — 15-page × 2-device audit
+- content.js / tree.js / entry.js — custom-page content structure probes
+- verify-page.js — custom-page brand-style verify
+- modal.js — boutique modal small-screen test
 
 ---
 
