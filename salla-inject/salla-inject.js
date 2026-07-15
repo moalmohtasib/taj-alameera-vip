@@ -120,6 +120,8 @@
     "@media (max-width:768px){.content--single-page{max-width:100% !important;margin:16px 12px 32px !important;padding:24px 18px 36px !important;border-radius:12px !important;}.content--single-page>h1{font-size:24px !important;}.content-entry{font-size:15px !important;line-height:1.9 !important;}.content-entry table{font-size:13px !important;}.content-entry table th,.content-entry table td{padding:10px 10px !important;}}",
     ".mm-ocd,.mm-ocd--open,.mm-ocd__content,.mm-slideout,#mobile-menu,.mobile-menu{z-index:9999999 !important;}",
     "/* ---- TAJ custom footer (light luxury) ---- */",
+    "/* Backstop: hide Salla native footer from first paint (JS also re-hides). */",
+    "footer.store-footer,footer.s-footer{display:none !important;}",
     ".taj-footer{background:var(--soft-cream) !important;color:var(--text-main) !important;font-family:'Almarai',sans-serif !important;direction:rtl !important;margin-top:60px !important;padding:80px 24px 0 !important;border-top:1px solid var(--border-hex) !important;}",
     ".taj-ft-toplogo{text-align:center !important;margin-bottom:50px !important;}",
     ".taj-ft-toplogo img{max-height:90px !important;width:auto !important;margin-bottom:30px !important;display:inline-block !important;}",
@@ -491,16 +493,37 @@
         payBlock +
       '</div>';
 
-    // Replace Salla's native footer if present, else append to body.
-    // Theme sets the native footer's inline style to `display:flex !important`,
-    // so a plain `.style.display='none'` loses. Must set with 'important'.
+    // Insert my footer after the native one, then KILL the native footer.
+    // Salla's footer is a web component that hydrates late and re-applies
+    // `display:flex !important` AFTER inject runs, so a one-shot hide loses.
+    // Fix: force-hide with 'important' + a MutationObserver that re-hides every
+    // time the theme touches the style attr. Belt: also re-hide a few times.
     var nativeFt = document.querySelector("footer.store-footer, footer.s-footer, footer:not(#taj-footer)");
     if (nativeFt && nativeFt.parentNode) {
-      nativeFt.style.setProperty("display", "none", "important");
       nativeFt.parentNode.insertBefore(ft, nativeFt.nextSibling);
+      hideNativeFooter(nativeFt);
     } else {
       document.body.appendChild(ft);
     }
+  }
+
+  function hideNativeFooter(el) {
+    var hide = function () {
+      if (el.style.getPropertyValue("display") !== "none") {
+        el.style.setProperty("display", "none", "important");
+      }
+    };
+    hide();
+    // Re-hide when theme re-applies inline style (late hydration).
+    try {
+      var mo = new MutationObserver(hide);
+      mo.observe(el, { attributes: true, attributeFilter: ["style"] });
+    } catch (e) { /* MutationObserver missing: fall through to interval */ }
+    // Belt-and-suspenders: re-hide a few times over first ~3s.
+    var n = 0, iv = setInterval(function () {
+      hide();
+      if (++n >= 15) clearInterval(iv);
+    }, 200);
   }
 
   /* ---------- 5. Boot ---------- */
