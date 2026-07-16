@@ -43,12 +43,12 @@ SEED = os.path.join(HERE, "seed-products.json")
 # category + type in Salla after import (bulk-select). Set BLANK_META=0 to keep them.
 BLANK_META = os.environ.get("BLANK_META", "1") != "0"
 
-# Salla rejects the file AT UPLOAD (structural check, before rows are read) when
-# the category / product-type / brand columns exist at all. Blanking the cells
-# was not enough. Default ON = physically DELETE columns تصنيف (C), نوع المنتج (F),
-# الماركة (T) from the sheet. Owner assigns category + type in the dashboard after
-# import. Set STRIP_META=0 to keep the columns.
-STRIP_META = os.environ.get("STRIP_META", "1") != "0"
+# Salla's official import doc: "Do not delete any columns from the template, even
+# if you do not need them." So stripping columns is WRONG (default OFF). The doc's
+# guidance for the "remove category/type/brand" prompt is to clear the VALUES
+# (that's BLANK_META), keeping all columns intact. STRIP_META=1 kept only as an
+# escape hatch; do not use it against the normal import flow.
+STRIP_META = os.environ.get("STRIP_META", "0") == "1"
 
 # profit tiers all 0 until owner sends real numbers (keep same as JS scripts)
 PROFIT_TIERS = [(5, 0), (10, 0), (20, 0), (float("inf"), 0)]
