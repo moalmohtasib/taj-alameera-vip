@@ -37,8 +37,18 @@
     // Legal (KSA)
     crNumber:  "1010134685",   // السجل التجاري
     vatNumber: "3013214697",   // الرقم الضريبي
-    // Gov business-verify QR link (Ministry of Commerce)
-    verifyUrl: "https://qr.mc.gov.sa/info/review?lang=ar&q=18bcm/EwQcB8MolmWsRQqQ=="
+    nationalNumber: "7002200579", // الرقم الوطني الموحد (mandatory per owner)
+    // Contact (owner data)
+    email:     "Tajalameeera@gmail.com",
+    phone:     "0553823281",       // WhatsApp + call
+    hours:     "يومياً من ٤ عصراً حتى ١١ مساءً",
+    established: "1997",           // بداية المحل
+    mapsUrl:   "https://maps.app.goo.gl/sh19ZjqhaPZJrSCA8",
+    mapsLabel: "مجوهرات تاج الاميرة",
+    // Gov business-verify QR (Ministry of Commerce). Owner sent a NEW QR image;
+    // we serve the image itself (verifyUrl inside it not machine-decoded).
+    verifyUrl: "https://qr.mc.gov.sa/info/review?lang=ar&q=18bcm/EwQcB8MolmWsRQqQ==",
+    qrImage:   CDN + "gov-qr.webp"   // owner's updated QR screenshot
   };
   /* ================================================ */
 
@@ -147,7 +157,7 @@
     ".taj-ft-toplogo{text-align:center !important;margin-bottom:50px !important;}",
     ".taj-ft-toplogo img{max-height:90px !important;width:auto !important;margin-bottom:30px !important;display:inline-block !important;}",
     ".taj-ft-toplogo .taj-ft-div{height:1px !important;background:rgba(197,160,89,0.2) !important;width:100% !important;max-width:1200px !important;margin:0 auto !important;}",
-    ".taj-ft-grid{max-width:1200px !important;margin:0 auto 70px !important;display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr !important;gap:50px !important;}",
+    ".taj-ft-grid{max-width:1280px !important;margin:0 auto 70px !important;display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:40px !important;}",
     ".taj-ft-col h4{color:var(--brand-gold) !important;font-size:1.1rem !important;font-weight:800 !important;margin:0 0 25px !important;letter-spacing:-0.3px !important;}",
     ".taj-ft-col ul{list-style:none !important;margin:0 !important;padding:0 !important;}",
     ".taj-ft-col li{margin:0 0 14px !important;}",
@@ -286,7 +296,8 @@
     ".tp-accent-line{width:50px;height:1.5px;background:var(--brand-gold);border-radius:2px;}",
     ".tp-pre-title{color:var(--brand-gold);font-weight:700;font-size:1.1rem;margin:0;letter-spacing:0 !important;word-spacing:normal;}",
     ".tp-brand-title{font-size:clamp(2.5rem,8vw,5rem);color:var(--text-light);font-weight:800;line-height:1.1;margin-bottom:30px;letter-spacing:0 !important;text-shadow:0 10px 40px rgba(0,0,0,0.3);}",
-    ".tp-brand-desc{color:rgba(255,255,255,0.95);font-size:1.3rem;max-width:600px;margin:0 auto 50px;line-height:1.8;font-weight:400;}",
+    ".tp-brand-desc{color:rgba(255,255,255,0.95);font-size:1.3rem;max-width:600px;margin:0 auto 20px;line-height:1.8;font-weight:400;}",
+    ".tp-brand-since{color:var(--brand-gold);font-size:0.95rem;letter-spacing:2px;margin:0 auto 40px;font-weight:700;}",
     ".tp-btn-brand{background:rgba(255,255,255,0.1);border:1px solid var(--brand-gold);color:var(--brand-gold);padding:20px 60px;font-weight:800;font-size:1.1rem;border-radius:50px;cursor:pointer;transition:0.5s cubic-bezier(0.2,1,0.3,1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-family:'Almarai',sans-serif;}",
     ".tp-btn-brand:hover{background:var(--brand-gold);color:#fff;transform:translateY(-5px);box-shadow:0 20px 40px rgba(197,160,89,0.35);}",
     ".tp-modal-system{position:fixed;inset:0;z-index:999999;display:none;align-items:center;justify-content:center;}",
@@ -355,6 +366,7 @@
         '<span class="tp-accent-line"></span></div>' +
         '<h1 class="tp-brand-title">فخامة الذهب<br>بتفاصيل ملكية</h1>' +
         '<p class="tp-brand-desc">تشكيلة فريدة من المجوهرات المصاغة يدوياً لتناسب ذوقكم الرفيع وبجودة تليق بتطلعاتكم.</p>' +
+        '<p class="tp-brand-since">نصنع الأناقة منذ عام ١٩٩٧</p>' +
         '<button class="tp-btn-brand" onclick="tp_toggle_boutique(true)">استكشف المجموعات</button>' +
       '</div>';
 
@@ -465,18 +477,35 @@
     var payBlock = '<div class="taj-ft-pay"><span>mada</span><span>VISA</span>' +
       '<span>Mastercard</span><span>Apple\u00A0Pay</span></div>';
 
-    // Trust block (CR + VAT) + gov verify QR
+    // Trust block (CR + VAT + national number) + gov verify QR
     var trust = "";
-    if (FOOTER.crNumber)  trust += '<p>السجل التجاري: ' + FOOTER.crNumber + '</p>';
-    if (FOOTER.vatNumber) trust += '<p>الرقم الضريبي: ' + FOOTER.vatNumber + '</p>';
+    if (FOOTER.crNumber)       trust += '<p>السجل التجاري: ' + FOOTER.crNumber + '</p>';
+    if (FOOTER.vatNumber)      trust += '<p>الرقم الضريبي: ' + FOOTER.vatNumber + '</p>';
+    if (FOOTER.nationalNumber) trust += '<p>الرقم الوطني الموحد: ' + FOOTER.nationalNumber + '</p>';
     var qr = "";
-    if (FOOTER.verifyUrl) {
-      var qrImg = "https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=" +
-        encodeURIComponent(FOOTER.verifyUrl);
-      qr = '<a class="taj-ft-qr" href="' + FOOTER.verifyUrl + '" target="_blank" rel="noopener">' +
-        '<img src="' + qrImg + '" alt="توثيق وزارة التجارة" loading="lazy">' +
+    if (FOOTER.verifyUrl || FOOTER.qrImage) {
+      // Prefer owner's uploaded QR image; fall back to generating one from the URL.
+      var qrSrc = FOOTER.qrImage
+        ? FOOTER.qrImage
+        : "https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=" +
+          encodeURIComponent(FOOTER.verifyUrl);
+      var qrHref = FOOTER.verifyUrl || FOOTER.qrImage;
+      qr = '<a class="taj-ft-qr" href="' + qrHref + '" target="_blank" rel="noopener">' +
+        '<img src="' + qrSrc + '" alt="توثيق وزارة التجارة" loading="lazy">' +
         '<span>موثّق لدى وزارة التجارة</span></a>';
     }
+
+    // Contact block (owner data): phone, email, hours, map
+    var contact = "";
+    if (FOOTER.phone) {
+      var telHref = "tel:+966" + FOOTER.phone.replace(/^0/, "");
+      contact += '<li><a href="' + telHref + '" dir="ltr">' + FOOTER.phone + '</a></li>';
+    }
+    if (FOOTER.email) contact += '<li><a href="mailto:' + FOOTER.email + '" dir="ltr">' + FOOTER.email + '</a></li>';
+    if (FOOTER.hours) contact += '<li>' + FOOTER.hours + '</li>';
+    if (FOOTER.mapsUrl) contact += '<li><a href="' + FOOTER.mapsUrl + '" target="_blank" rel="noopener">' +
+      (FOOTER.mapsLabel || "الموقع على الخريطة") + '</a></li>';
+    var contactBlock = contact ? '<div class="taj-ft-col"><h4>تواصل معنا</h4><ul>' + contact + '</ul></div>' : "";
 
     // Top logo — reuse store's own header logo, fallback to store name text
     var logoImg = document.querySelector(".navbar-brand img, header img");
@@ -504,6 +533,7 @@
         '</div>' +
         '<div class="taj-ft-col"><h4>تسوّق</h4><ul>' + shopLinks + '</ul></div>' +
         '<div class="taj-ft-col"><h4>روابط مهمة</h4><ul>' + policyLinks + '</ul></div>' +
+        contactBlock +
         '<div class="taj-ft-col">' +
           '<h4>موثوقية</h4>' +
           '<div class="taj-ft-trust">' + trust + '</div>' + qr +

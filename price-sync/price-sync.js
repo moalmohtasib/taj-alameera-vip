@@ -42,6 +42,20 @@ const CONFIG = {
   // KSA VAT rate. 0.15 = 15%. Set 0 if Salla adds VAT itself at checkout
   // (avoid double-charging). CONFIRM with owner how VAT is handled in Salla.
   VAT_RATE: 0.15,
+
+  // ---- PROFIT MARGIN (per owner) ----
+  // Owner's formula: price = (weight * gram[karat]) + making + PROFIT + VAT
+  // PROFIT = profit-per-gram * weight, where profit-per-gram is TIERED by weight.
+  // Owner will send the real tiers. Until then all tiers = 0 (no profit added,
+  // prices unchanged). Each tier: { maxG: upper weight bound (grams), perGram: SAR/g }.
+  // Sorted ascending by maxG; first tier whose maxG >= weight wins. Last tier
+  // maxG:Infinity is the catch-all for heavy pieces.
+  PROFIT_TIERS: [
+    { maxG: 5,        perGram: 0 },
+    { maxG: 10,       perGram: 0 },
+    { maxG: 20,       perGram: 0 },
+    { maxG: Infinity, perGram: 0 }
+  ],
 };
 
 /* --------------------------------------------------------------- PRODUCTS */
@@ -82,6 +96,15 @@ function ok(...a)  { console.log("  \u2713", ...a); }
 
 function round2(n) { return Math.round(n * 100) / 100; }
 
+// Profit-per-gram from the tiered table, chosen by piece weight.
+function profitPerGram(weight) {
+  const tiers = CONFIG.PROFIT_TIERS || [];
+  for (const t of tiers) {
+    if (weight <= t.maxG) return t.perGram || 0;
+  }
+  return 0;
+}
+
 function computePrice(gram, p) {
   const g = gram[p.karat];
   if (typeof g !== "number" || isNaN(g)) throw new Error(`no gram price for karat ${p.karat}`);
@@ -91,14 +114,15 @@ function computePrice(gram, p) {
   else if (p.making.type === "fixed") making = p.making.value;
   else throw new Error(`bad making type: ${p.making.type}`);
   const stones = p.stones || 0;
-  const subtotal = goldValue + making + stones;
+  const profit = profitPerGram(p.weight) * p.weight;
+  const subtotal = goldValue + making + stones + profit;
   const vat = subtotal * CONFIG.VAT_RATE;
   const total = round2(subtotal + vat);
   return {
     total,
     breakdown: {
       gold: round2(goldValue), making: round2(making),
-      stones: round2(stones), vat: round2(vat)
+      stones: round2(stones), profit: round2(profit), vat: round2(vat)
     }
   };
 }
@@ -228,7 +252,7 @@ async function main() {
 
     if (CONFIG.DRY_RUN) {
       log(`DRY  ${tag} ${p.karat} ${p.weight}g  current=${current ?? "?"}  ->  ${computed} SAR ` +
-          `(ذهب ${bd.gold} + صنعة ${bd.making}` + (bd.stones ? ` + أحجار ${bd.stones}` : "") + ` + ضريبة ${bd.vat})`);
+          `(ذهب ${bd.gold} + صنعة ${bd.making}` + (bd.stones ? ` + أحجار ${bd.stones}` : "") + (bd.profit ? ` + ربح ${bd.profit}` : "") + ` + ضريبة ${bd.vat})`);
       wouldWrite++;
       continue;
     }

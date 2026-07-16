@@ -36,6 +36,15 @@ const CONFIG = {
   // double-charge). Same rate price-sync.js uses — keep them identical.
   VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0.15,
 
+  // Profit-per-gram tiers by weight. MUST match price-sync.js so launch price ==
+  // sync price. All 0 until owner sends real tiers (no profit added for now).
+  PROFIT_TIERS: [
+    { maxG: 5,        perGram: 0 },
+    { maxG: 10,       perGram: 0 },
+    { maxG: 20,       perGram: 0 },
+    { maxG: Infinity, perGram: 0 }
+  ],
+
   // Launch products as "hidden" so owner reviews before they go public.
   // Set STATUS=sale to publish immediately.
   STATUS: process.env.STATUS || "hidden",
@@ -50,6 +59,12 @@ function err(...a) { console.error("  \u2717", ...a); }
 function ok(...a)  { console.log("  \u2713", ...a); }
 function round2(n) { return Math.round(n * 100) / 100; }
 
+function profitPerGram(weight) {
+  const tiers = CONFIG.PROFIT_TIERS || [];
+  for (const t of tiers) { if (weight <= t.maxG) return t.perGram || 0; }
+  return 0;
+}
+
 function computePrice(gram, p) {
   const g = gram[p.karat];
   if (typeof g !== "number" || isNaN(g)) throw new Error(`no gram price for karat ${p.karat}`);
@@ -59,9 +74,10 @@ function computePrice(gram, p) {
   else if (p.making.type === "fixed") making = p.making.value;
   else throw new Error(`bad making type: ${p.making.type}`);
   const stones = p.stones || 0;
-  const subtotal = goldValue + making + stones;
+  const profit = profitPerGram(p.weight) * p.weight;
+  const subtotal = goldValue + making + stones + profit;
   const total = round2(subtotal * (1 + CONFIG.VAT_RATE));
-  return { total, breakdown: { gold: round2(goldValue), making: round2(making), stones: round2(stones) } };
+  return { total, breakdown: { gold: round2(goldValue), making: round2(making), stones: round2(stones), profit: round2(profit) } };
 }
 
 async function getGramPrices() {
