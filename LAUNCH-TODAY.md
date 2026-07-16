@@ -20,6 +20,38 @@ manual Salla-dashboard steps + what to run + what data we still need from owner.
 
 ---
 
+## FASTEST PATH — No token, no Partner, no approval (recommended for today)
+
+Salla lets you bulk-upload products from a spreadsheet in the dashboard. No API
+token, no Salla Partner account, no review. Best way to go live today.
+
+1. Build the import file (prices computed from live gold):
+   ```
+   cd price-sync
+   node build-import-csv.js
+   ```
+   Writes `price-sync/salla-import.csv` (28 products, status = مخفي/hidden).
+   Re-run right before uploading if gold moved. `STATUS=sale node build-import-csv.js`
+   to publish immediately instead of hidden.
+2. In Salla: المنتجات → استيراد وتصدير → استيراد منتجات جديدة.
+3. Download Salla's own template first (it has the exact columns your store
+   expects). Open `salla-import.csv`, copy each column into the matching column
+   of Salla's template. Rules: don't delete Salla's columns, don't edit gray
+   cells, keep multiple image URLs comma-joined in one cell.
+4. Save Salla's template, upload it, click تحديث/Update. Wait for processing.
+5. Review products, then flip مخفي → معروض to publish.
+
+Prices are static after import (they won't track gold). To auto-track gold you
+need the API path below (STEP 1–3). CSV now, API later is fine.
+
+---
+
+## API PATH (optional, only if owner wants auto-repricing)
+
+Private app on your OWN store = self-approved instantly, NO Salla review. Only
+public App-Store listings need review. Token expires ~14 days (needs refresh
+for long-term). Skip this entirely if the CSV path above is enough.
+
 ## STEP 1 — Get the Salla API token (owner + you, 2 min)
 
 1. Salla dashboard → التطبيقات / Salla Partners → create a private app (or use an
