@@ -124,6 +124,14 @@ def main():
     wb = openpyxl.load_workbook(TEMPLATE)
     ws = wb.active
 
+    # Salla rejected upload with "يرجى حذف المصنفات الإضافية (Categories, Types &
+    # Brands)" = delete the extra reference sheet. Salla's template ships a second
+    # sheet ("Categories, Types & Brands") as a lookup guide, but the importer wants
+    # a single-sheet workbook. Drop every sheet except the active product sheet.
+    for name in list(wb.sheetnames):
+        if wb[name] is not ws:
+            del wb[name]
+
     # Salla rejects at upload with "delete category type brand". Physically REMOVE
     # those columns (تصنيف C=3, نوع المنتج F=6, الماركة T=20). Delete right-to-left
     # so earlier indices stay valid. After this the column letters shift, so the
