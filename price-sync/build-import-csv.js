@@ -31,8 +31,9 @@ const CONFIG = {
   ALLOW_STALE: process.env.FORCE_STALE === "1",
 
   // Keep IDENTICAL to price-sync.js + salla-create-products.js so the imported
-  // launch price matches whatever the API sync would compute later.
-  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0.15,
+  // launch price matches whatever the API sync would compute later. VAT 0 =
+  // owner adds VAT in Salla dashboard. Override VAT_RATE=0.15 if Salla VAT OFF.
+  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0,
   PROFIT_TIERS: [
     { maxG: 5,        perGram: 0 },
     { maxG: 10,       perGram: 0 },

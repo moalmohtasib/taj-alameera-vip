@@ -32,9 +32,10 @@ const CONFIG = {
   GRAM_MAX: 900,
   ALLOW_STALE: process.env.FORCE_STALE === "1",
 
-  // KSA VAT. 0.15 = 15%. Set 0 if Salla itself adds VAT at checkout (avoid
-  // double-charge). Same rate price-sync.js uses — keep them identical.
-  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0.15,
+  // KSA VAT. Owner adds VAT from Salla dashboard at checkout, so push VAT-
+  // EXCLUSIVE (0) to avoid double-charge. Same default as price-sync.js — keep
+  // identical. Override VAT_RATE=0.15 only if Salla VAT is OFF.
+  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0,
 
   // Profit-per-gram tiers by weight. MUST match price-sync.js so launch price ==
   // sync price. All 0 until owner sends real tiers (no profit added for now).

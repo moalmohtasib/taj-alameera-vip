@@ -24,7 +24,9 @@ const CONFIG = {
   PROXY_URL: "https://taj-gold-proxy.tajalamerahost.workers.dev/",
   GRAM_MIN: 150, GRAM_MAX: 900,
   ALLOW_STALE: process.env.FORCE_STALE === "1",
-  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0.15,
+  // VAT 0 = owner adds VAT in Salla dashboard at checkout (avoid double-charge).
+  // Override VAT_RATE=0.15 only if Salla VAT is turned OFF.
+  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0,
   PROFIT_TIERS: [
     { maxG: 5, perGram: 0 }, { maxG: 10, perGram: 0 },
     { maxG: 20, perGram: 0 }, { maxG: Infinity, perGram: 0 }

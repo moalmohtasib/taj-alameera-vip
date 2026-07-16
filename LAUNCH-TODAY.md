@@ -122,8 +122,10 @@ Paste the whole contents of `salla-inject/salla-inject.js`. Save. Hard-refresh s
      { maxG: Infinity, perGram: 15 }
    ]
    ```
-3. **VAT handling** — confirm how Salla applies VAT. If Salla adds 15% itself at
-   checkout, set `VAT_RATE: 0` in both scripts to avoid double-charging.
+3. ~~VAT handling~~ — DECIDED. Scripts now push VAT-EXCLUSIVE prices (VAT_RATE
+   default = 0). Owner turns VAT ON in Salla (الإعدادات → الضريبة, 15%); Salla
+   adds it at checkout. No double-charge. If Salla VAT is ever OFF, rebuild with
+   `VAT_RATE=0.15 ./build-xlsx.sh`.
 4. ~~New gov QR verify URL~~ — DONE. Footer shows owner's new QR image and links to
    the new Saudi Business Center verify URL.
 

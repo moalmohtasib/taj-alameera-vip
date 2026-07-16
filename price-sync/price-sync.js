@@ -39,9 +39,10 @@ const CONFIG = {
   // Ignore MAX_MOVE_FRAC on first run when Salla price is 0/placeholder.
 
   // ---- VAT ----
-  // KSA VAT rate. 0.15 = 15%. Set 0 if Salla adds VAT itself at checkout
-  // (avoid double-charging). CONFIRM with owner how VAT is handled in Salla.
-  VAT_RATE: 0.15,
+  // KSA VAT rate. Owner adds VAT from Salla dashboard at checkout, so scripts
+  // push VAT-EXCLUSIVE prices (0) to avoid double-charging. Override with env
+  // VAT_RATE=0.15 only if Salla VAT is turned OFF.
+  VAT_RATE: process.env.VAT_RATE != null ? Number(process.env.VAT_RATE) : 0,
 
   // ---- PROFIT MARGIN (per owner) ----
   // Owner's formula: price = (weight * gram[karat]) + making + PROFIT + VAT
