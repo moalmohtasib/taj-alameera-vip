@@ -132,15 +132,15 @@ def main():
         for col in (20, 6, 3):          # T, F, C
             ws.delete_cols(col, 1)
 
-    # Salla's template ships with sample rows 3 & 4 (a product + a variant row)
-    # pre-filled across ALL columns (brand, tax flags, option columns, extra
-    # category). We only set a few columns, so leftover sample junk stayed and
-    # Salla rejected it ("delete extra category / type"). Wipe every data cell
-    # first so each row carries ONLY our values.
-    last_col = max(ws.max_column, 40)
-    for r in range(3, ws.max_row + 5):
-        for c in range(1, last_col + 1):
-            ws.cell(row=r, column=c).value = None
+    # Salla's template ships with MULTIPLE sample rows starting at row 3 (a product
+    # row + variant rows) carrying gray "explanatory only" cells (FFd6d6d6) marked
+    # ممنوع الكتابة plus sample junk (barcode, option colors, sizes, logo URL). The
+    # official import doc says "Do not edit cells shaded in gray", and leftover sample
+    # values in extra columns made Salla reject earlier. DELETE every sample row from
+    # 3 to the end so our products write into clean rows with no residual junk in the
+    # columns we don't set. Header rows 1 & 2 stay intact.
+    if ws.max_row >= 3:
+        ws.delete_rows(3, ws.max_row - 2)
 
     # Resolve columns by HEADER NAME (row 2) so the mapping survives the column
     # strip above (letters shift after delete_cols). Header text is trimmed.
