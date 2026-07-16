@@ -45,9 +45,8 @@
     established: "1997",           // بداية المحل
     mapsUrl:   "https://maps.app.goo.gl/sh19ZjqhaPZJrSCA8",
     mapsLabel: "مجوهرات تاج الاميرة",
-    // Gov business-verify QR (Ministry of Commerce). Owner sent a NEW QR image;
-    // we serve the image itself (verifyUrl inside it not machine-decoded).
-    verifyUrl: "https://qr.mc.gov.sa/info/review?lang=ar&q=18bcm/EwQcB8MolmWsRQqQ==",
+    // Gov business-verify QR (Saudi Business Center). New link + QR image from owner.
+    verifyUrl: "https://qr.saudibusiness.gov.sa/viewcr?nCrNumber=2E1G6VhLlf4N1yIQPAYIEQ==",
     qrImage:   CDN + "gov-qr.webp"   // owner's updated QR screenshot
   };
   /* ================================================ */

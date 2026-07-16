@@ -92,9 +92,8 @@ Paste the whole contents of `salla-inject/salla-inject.js`. Save. Hard-refresh s
    ```
 3. **VAT handling** — confirm how Salla applies VAT. If Salla adds 15% itself at
    checkout, set `VAT_RATE: 0` in both scripts to avoid double-charging.
-4. **New gov QR verify URL** — footer currently shows the owner's new QR **image**
-   and links to the OLD verify URL. If owner has the new URL text, update
-   `FOOTER.verifyUrl` in `salla-inject.js`.
+4. ~~New gov QR verify URL~~ — DONE. Footer shows owner's new QR image and links to
+   the new Saudi Business Center verify URL.
 
 ---
 
