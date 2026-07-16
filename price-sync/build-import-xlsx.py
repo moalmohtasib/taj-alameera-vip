@@ -43,6 +43,13 @@ SEED = os.path.join(HERE, "seed-products.json")
 # category + type in Salla after import (bulk-select). Set BLANK_META=0 to keep them.
 BLANK_META = os.environ.get("BLANK_META", "1") != "0"
 
+# Salla rejects the file AT UPLOAD (structural check, before rows are read) when
+# the category / product-type / brand columns exist at all. Blanking the cells
+# was not enough. Default ON = physically DELETE columns تصنيف (C), نوع المنتج (F),
+# الماركة (T) from the sheet. Owner assigns category + type in the dashboard after
+# import. Set STRIP_META=0 to keep the columns.
+STRIP_META = os.environ.get("STRIP_META", "1") != "0"
+
 # profit tiers all 0 until owner sends real numbers (keep same as JS scripts)
 PROFIT_TIERS = [(5, 0), (10, 0), (20, 0), (float("inf"), 0)]
 
@@ -117,6 +124,14 @@ def main():
     wb = openpyxl.load_workbook(TEMPLATE)
     ws = wb.active
 
+    # Salla rejects at upload with "delete category type brand". Physically REMOVE
+    # those columns (تصنيف C=3, نوع المنتج F=6, الماركة T=20). Delete right-to-left
+    # so earlier indices stay valid. After this the column letters shift, so the
+    # write mapping below uses the POST-STRIP column map.
+    if STRIP_META:
+        for col in (20, 6, 3):          # T, F, C
+            ws.delete_cols(col, 1)
+
     # Salla's template ships with sample rows 3 & 4 (a product + a variant row)
     # pre-filled across ALL columns (brand, tax flags, option columns, extra
     # category). We only set a few columns, so leftover sample junk stayed and
@@ -126,6 +141,34 @@ def main():
     for r in range(3, ws.max_row + 5):
         for c in range(1, last_col + 1):
             ws.cell(row=r, column=c).value = None
+
+    # Resolve columns by HEADER NAME (row 2) so the mapping survives the column
+    # strip above (letters shift after delete_cols). Header text is trimmed.
+    hdr = {}
+    for c in range(1, ws.max_column + 1):
+        v = ws.cell(row=2, column=c).value
+        if v is not None:
+            hdr[str(v).strip()] = c
+
+    def col(name):
+        return hdr.get(name)
+
+    C_TYPEROW = col("النوع")          # product/variant marker (A)
+    C_NAME    = col("أسم المنتج")
+    C_CAT     = col("تصنيف المنتج")   # None if stripped
+    C_IMG     = col("صورة المنتج")
+    C_ALT     = col("وصف صورة المنتج")
+    C_PTYPE   = col("نوع المنتج")     # None if stripped
+    C_PRICE   = col("سعر المنتج")
+    C_DESC    = col("الوصف")
+    C_SHIP    = col("هل يتطلب شحن؟")
+    C_SKU     = col("رمز المنتج sku")
+    C_WT      = col("الوزن")
+    C_WTUNIT  = col("وحدة الوزن")
+
+    def put(c, r, v):
+        if c:
+            ws.cell(row=r, column=c, value=v)
 
     row = 3  # rows 1 & 2 are Salla's headers
     ok = failed = 0
@@ -146,20 +189,22 @@ def main():
         imgs = ",".join([u for u in (gallery if gallery else [p.get("hero")]) if u])
         kg = round4(p["weight"] / 1000.0)
 
-        ws.cell(row=row, column=1, value="منتج")          # A النوع (product row marker; NOT product-type)
-        ws.cell(row=row, column=2, value=p["name"])        # B أسم المنتج
-        if not BLANK_META:
-            ws.cell(row=row, column=3, value=cat)          # C تصنيف المنتج
-        ws.cell(row=row, column=4, value=imgs)             # D صورة المنتج
-        ws.cell(row=row, column=5, value=p["name"])        # E وصف صورة المنتج (alt)
-        if not BLANK_META:
-            ws.cell(row=row, column=6, value="منتج جاهز")  # F نوع المنتج
-        ws.cell(row=row, column=7, value=price)            # G سعر المنتج
-        ws.cell(row=row, column=8, value=desc)             # H الوصف
-        ws.cell(row=row, column=9, value="نعم")            # I هل يتطلب شحن؟
-        ws.cell(row=row, column=10, value=p["sku"])        # J رمز المنتج sku
-        ws.cell(row=row, column=18, value=kg)              # R الوزن (kg)
-        ws.cell(row=row, column=19, value="kg")            # S وحدة الوزن
+        put(C_TYPEROW, row, "منتج")   # A النوع (product row marker; NOT product-type)
+        put(C_NAME, row, p["name"])   # B أسم المنتج
+        # C تصنيف المنتج: only when kept (STRIP_META=0 AND BLANK_META=0)
+        if C_CAT and not BLANK_META:
+            put(C_CAT, row, cat)
+        put(C_IMG, row, imgs)         # D صورة المنتج
+        put(C_ALT, row, p["name"])    # E وصف صورة المنتج (alt)
+        # F نوع المنتج: only when kept
+        if C_PTYPE and not BLANK_META:
+            put(C_PTYPE, row, "منتج جاهز")
+        put(C_PRICE, row, price)      # G سعر المنتج
+        put(C_DESC, row, desc)        # H الوصف
+        put(C_SHIP, row, "نعم")       # I هل يتطلب شحن؟
+        put(C_SKU, row, p["sku"])     # J رمز المنتج sku
+        put(C_WT, row, kg)            # R الوزن (kg)
+        put(C_WTUNIT, row, "kg")      # S وحدة الوزن
         print("row %d: P%s %s  %s %sg -> %s SAR  [%s]" % (row, p.get("folder"), p["name"], p["karat"], p["weight"], price, cat))
         row += 1
         ok += 1
