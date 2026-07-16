@@ -25,21 +25,24 @@ manual Salla-dashboard steps + what to run + what data we still need from owner.
 Salla lets you bulk-upload products from a spreadsheet in the dashboard. No API
 token, no Salla Partner account, no review. Best way to go live today.
 
-1. Build the import file (prices computed from live gold):
+1. In Salla: المنتجات → استيراد وتصدير → استيراد منتجات جديدة. Download Salla's
+   own template (product-sample.xlsx). Save it to `~/Downloads/product-sample.xlsx`.
+2. Build the ready-to-upload file (fills Salla's template, prices from live gold):
    ```
    cd price-sync
-   node build-import-csv.js
+   /usr/bin/python3 build-import-xlsx.py
    ```
-   Writes `price-sync/salla-import.csv` (28 products, status = مخفي/hidden).
-   Re-run right before uploading if gold moved. `STATUS=sale node build-import-csv.js`
-   to publish immediately instead of hidden.
-2. In Salla: المنتجات → استيراد وتصدير → استيراد منتجات جديدة.
-3. Download Salla's own template first (it has the exact columns your store
-   expects). Open `salla-import.csv`, copy each column into the matching column
-   of Salla's template. Rules: don't delete Salla's columns, don't edit gray
-   cells, keep multiple image URLs comma-joined in one cell.
-4. Save Salla's template, upload it, click تحديث/Update. Wait for processing.
-5. Review products, then flip مخفي → معروض to publish.
+   Writes `price-sync/salla-import.xlsx` — a REAL Excel file (openpyxl) Salla
+   accepts. 28 products, weight in kg, category mapped to سلاسل وعقود etc.
+   Re-run right before uploading if gold moved. Uses `~/Downloads/product-sample.xlsx`
+   by default; override with `TEMPLATE=/path node ...`.
+   (Mac has openpyxl only under `/usr/bin/python3`, not the default `python3`.)
+3. Upload `salla-import.xlsx` in Salla, click تحديث/Update. Wait for processing.
+4. Review products, then flip مخفي → معروض to publish.
+
+Note: the old hand-zipped xlsx (`build-xlsx.sh` + `build-import-xlsx.js`) was
+rejected by Salla ("needs Microsoft Excel"). The Python builder replaces it.
+`build-import-csv.js` (CSV) stays as a manual-paste fallback only.
 
 Prices are static after import (they won't track gold). To auto-track gold you
 need the API path below (STEP 1–3). CSV now, API later is fine.
