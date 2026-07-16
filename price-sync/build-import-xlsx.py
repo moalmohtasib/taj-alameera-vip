@@ -111,6 +111,16 @@ def main():
     wb = openpyxl.load_workbook(TEMPLATE)
     ws = wb.active
 
+    # Salla's template ships with sample rows 3 & 4 (a product + a variant row)
+    # pre-filled across ALL columns (brand, tax flags, option columns, extra
+    # category). We only set a few columns, so leftover sample junk stayed and
+    # Salla rejected it ("delete extra category / type"). Wipe every data cell
+    # first so each row carries ONLY our values.
+    last_col = max(ws.max_column, 40)
+    for r in range(3, ws.max_row + 5):
+        for c in range(1, last_col + 1):
+            ws.cell(row=r, column=c).value = None
+
     row = 3  # rows 1 & 2 are Salla's headers
     ok = failed = 0
     for p in seed:
