@@ -37,6 +37,12 @@ TEMPLATE = os.environ.get("TEMPLATE", os.path.expanduser("~/Downloads/product-sa
 OUT = os.environ.get("OUT", os.path.join(HERE, "salla-import.xlsx"))
 SEED = os.path.join(HERE, "seed-products.json")
 
+# Salla rejects import when the category / product-type / brand columns carry
+# values it wants set in the dashboard ("please delete category type brand").
+# Default ON = leave C (تصنيف), F (نوع المنتج), T (الماركة) BLANK; owner assigns
+# category + type in Salla after import (bulk-select). Set BLANK_META=0 to keep them.
+BLANK_META = os.environ.get("BLANK_META", "1") != "0"
+
 # profit tiers all 0 until owner sends real numbers (keep same as JS scripts)
 PROFIT_TIERS = [(5, 0), (10, 0), (20, 0), (float("inf"), 0)]
 
@@ -140,12 +146,14 @@ def main():
         imgs = ",".join([u for u in (gallery if gallery else [p.get("hero")]) if u])
         kg = round4(p["weight"] / 1000.0)
 
-        ws.cell(row=row, column=1, value="منتج")          # A النوع
+        ws.cell(row=row, column=1, value="منتج")          # A النوع (product row marker; NOT product-type)
         ws.cell(row=row, column=2, value=p["name"])        # B أسم المنتج
-        ws.cell(row=row, column=3, value=cat)              # C تصنيف المنتج
+        if not BLANK_META:
+            ws.cell(row=row, column=3, value=cat)          # C تصنيف المنتج
         ws.cell(row=row, column=4, value=imgs)             # D صورة المنتج
         ws.cell(row=row, column=5, value=p["name"])        # E وصف صورة المنتج (alt)
-        ws.cell(row=row, column=6, value="منتج جاهز")      # F نوع المنتج
+        if not BLANK_META:
+            ws.cell(row=row, column=6, value="منتج جاهز")  # F نوع المنتج
         ws.cell(row=row, column=7, value=price)            # G سعر المنتج
         ws.cell(row=row, column=8, value=desc)             # H الوصف
         ws.cell(row=row, column=9, value="نعم")            # I هل يتطلب شحن؟

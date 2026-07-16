@@ -33,12 +33,16 @@ token, no Salla Partner account, no review. Best way to go live today.
    /usr/bin/python3 build-import-xlsx.py
    ```
    Writes `price-sync/salla-import.xlsx` — a REAL Excel file (openpyxl) Salla
-   accepts. 28 products, weight in kg, category mapped to سلاسل وعقود etc.
+   accepts. 28 products, weight in kg. Category / product-type / brand columns
+   are left BLANK by default (Salla rejects them in the sheet — "delete category
+   type brand"). Assign category + type in the dashboard after import.
    Re-run right before uploading if gold moved. Uses `~/Downloads/product-sample.xlsx`
-   by default; override with `TEMPLATE=/path node ...`.
+   by default; override with `TEMPLATE=/path/to/template.xlsx`.
+   To keep category/type in the sheet instead: `BLANK_META=0 /usr/bin/python3 build-import-xlsx.py`.
    (Mac has openpyxl only under `/usr/bin/python3`, not the default `python3`.)
 3. Upload `salla-import.xlsx` in Salla, click تحديث/Update. Wait for processing.
-4. Review products, then flip مخفي → معروض to publish.
+4. Bulk-select the imported products → assign تصنيف (أساور / سلاسل وعقود / خواتم)
+   from the dashboard. Then flip مخفي → معروض to publish.
 
 Note: the old hand-zipped xlsx (`build-xlsx.sh` + `build-import-xlsx.js`) was
 rejected by Salla ("needs Microsoft Excel"). The Python builder replaces it.
