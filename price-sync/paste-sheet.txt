@@ -1,0 +1,525 @@
+======================================================================
+تاج الأميرة - ورقة لصق المنتجات (إضافة يدوية في سلة)
+سعر الجرام SAR: 24=486.2  21=425.43  18=364.65   وقت=2026-07-16T10:51:31.298Z
+VAT: 0.0  (سلة تضيف الضريبة عند الدفع)
+لكل منتج: انسخ الحقول في نموذج (المنتجات -> أضف منتج).
+======================================================================
+
+----------------------------------------------------------------------
+[ P1 ]
+الاسم:      إسورة ذهب فاخرة
+التصنيف:    أساور
+السعر:      5585.16
+SKU:        B-21Y-1200-1
+الوزن:      12 جم
+الكمية:     1
+الوصف:
+إسورة ذهب فاخرة - عيار 21 - وزن تقريبي 12 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (8) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-model-hand.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-jewelry-set.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-band-ring.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-cuff-bracelet.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-3.webp
+  8. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-4.webp
+
+----------------------------------------------------------------------
+[ P2 ]
+الاسم:      إسورة ذهب بحبات البرسيم
+التصنيف:    أساور
+السعر:      6516.02
+SKU:        B-21Y-1400-2
+الوزن:      14 جم
+الكمية:     1
+الوصف:
+إسورة ذهب بحبات البرسيم - عيار 21 - وزن تقريبي 14 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-woman-cuff.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-cuff-on-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-cuff-travertine.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-clover-bead-detail.webp
+
+----------------------------------------------------------------------
+[ P3 ]
+الاسم:      إسورة كف ذهب بلونين
+التصنيف:    أساور
+السعر:      8413.74
+SKU:        B-21Y-1800-3
+الوزن:      18 جم
+الكمية:     1
+الوصف:
+إسورة كف ذهب بلونين - عيار 21 - وزن تقريبي 18 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-model-cuff.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-3.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-3.webp
+
+----------------------------------------------------------------------
+[ P4 ]
+الاسم:      إسورة ذهب بحبات مزخرفة
+التصنيف:    أساور
+السعر:      6050.59
+SKU:        B-21Y-1300-4
+الوزن:      13 جم
+الكمية:     1
+الوصف:
+إسورة ذهب بحبات مزخرفة - عيار 21 - وزن تقريبي 13 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-hand-bracelet.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-travertine.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-detail.webp
+
+----------------------------------------------------------------------
+[ P5 ]
+الاسم:      طقم ذهب فيليغرين (إسورة وخاتم)
+التصنيف:    أساور
+السعر:      7526.88
+SKU:        S-21Y-1600-5
+الوزن:      16 جم
+الكمية:     1
+الوصف:
+طقم ذهب فيليغرين (إسورة وخاتم) - عيار 21 - وزن تقريبي 16 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (6) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-woman-set.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-set-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-set-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-filigree-detail.webp
+
+----------------------------------------------------------------------
+[ P6 ]
+الاسم:      طقم ذهب بنقشة سداسية (إسورة وخاتم)
+التصنيف:    أساور
+السعر:      7997.31
+SKU:        S-21Y-1700-6
+الوزن:      17 جم
+الكمية:     1
+الوصف:
+طقم ذهب بنقشة سداسية (إسورة وخاتم) - عيار 21 - وزن تقريبي 17 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (8) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-woman-set.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-set-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-set-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-3.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-4.webp
+  8. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-hexmesh-detail.webp
+
+----------------------------------------------------------------------
+[ P7 ]
+الاسم:      طقم ذهب بنقشة المسمار (إسورة وخاتم)
+التصنيف:    أساور
+السعر:      8938.17
+SKU:        S-21Y-1900-7
+الوزن:      19 جم
+الكمية:     1
+الوصف:
+طقم ذهب بنقشة المسمار (إسورة وخاتم) - عيار 21 - وزن تقريبي 19 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (10) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-woman-set.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-set-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-set-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-screw-motif.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-3.webp
+  8. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-4.webp
+  9. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-5.webp
+  10. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-6.webp
+
+----------------------------------------------------------------------
+[ P8 ]
+الاسم:      إسورة ذهب مجدولة بلونين
+التصنيف:    أساور
+السعر:      7011.45
+SKU:        B-21Y-1500-8
+الوزن:      15 جم
+الكمية:     1
+الوصف:
+إسورة ذهب مجدولة بلونين - عيار 21 - وزن تقريبي 15 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-woman-braided.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-twotone-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-twotone-stone.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-3.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-braided-detail.webp
+
+----------------------------------------------------------------------
+[ P9 ]
+الاسم:      طقم ذهب بتصميم ملفوف (إسورة وخاتم)
+التصنيف:    أساور
+السعر:      7526.88
+SKU:        S-21Y-1600-9
+الوزن:      16 جم
+الكمية:     1
+الوصف:
+طقم ذهب بتصميم ملفوف (إسورة وخاتم) - عيار 21 - وزن تقريبي 16 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (15) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-woman-coiled-bracelet.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-woman-set.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-set-linen.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-ring-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-ring-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-stretching.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-1.webp
+  8. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-2.webp
+  9. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-3.webp
+  10. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-4.webp
+  11. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-5.webp
+  12. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-6.webp
+  13. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-7.webp
+  14. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-8.webp
+  15. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-detail.webp
+
+----------------------------------------------------------------------
+[ P10 ]
+الاسم:      سلسلة ذهب بتعليقة بيضاوية
+التصنيف:    سلاسل وعقود
+السعر:      3197.2
+SKU:        N-18Y-0800-10
+الوزن:      8 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بتعليقة بيضاوية - عيار 18 - وزن تقريبي 8 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (6) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-woman-pendant.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-necklace-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-oval-pendant.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-pendant-detail.webp
+
+----------------------------------------------------------------------
+[ P11 ]
+الاسم:      سلسلة ذهب بتعليقات ألماس
+التصنيف:    سلاسل وعقود
+السعر:      2818.55
+SKU:        N-18Y-0700-11
+الوزن:      7 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بتعليقات ألماس - عيار 18 - وزن تقريبي 7 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-woman-pendant.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-diamond-pendants.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-necklace-drops.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-necklace-silk.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-3.webp
+
+----------------------------------------------------------------------
+[ P12 ]
+الاسم:      سلسلة ذهب بحبات وتعليقات
+التصنيف:    سلاسل وعقود
+السعر:      3596.85
+SKU:        N-18Y-0900-12
+الوزن:      9 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بحبات وتعليقات - عيار 18 - وزن تقريبي 9 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-woman-necklace.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-ball-chain-teardrop-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-ball-chain-teardrop-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-bead-chain-charms.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-multi-charm-stone.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ref-1.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ref-2.webp
+
+----------------------------------------------------------------------
+[ P13 ]
+الاسم:      سلسلة ذهب بلونين
+التصنيف:    سلاسل وعقود
+السعر:      3205.2
+SKU:        N-18Y-0800-13
+الوزن:      8 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بلونين - عيار 18 - وزن تقريبي 8 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (6) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-woman-necklace.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-gold-white-chain.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-1.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-2.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-3.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ref-1.webp
+
+----------------------------------------------------------------------
+[ P14 ]
+الاسم:      سلسلة ذهب ناعمة بسيطة
+التصنيف:    سلاسل وعقود
+السعر:      2397.9
+SKU:        N-18Y-0600-14
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب ناعمة بسيطة - عيار 18 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-woman-necklace.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-necklace-travertine.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-minimalist-necklace.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-3.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-bead-detail.webp
+
+----------------------------------------------------------------------
+[ P15 ]
+الاسم:      سلسلة ذهب بتعليقة حجر كريم
+التصنيف:    سلاسل وعقود
+السعر:      3623.85
+SKU:        N-18Y-0900-15
+الوزن:      9 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بتعليقة حجر كريم - عيار 18 - وزن تقريبي 9 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-woman-necklace.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-chain-gemstone.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-gemstone-pendant.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-3.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-fan-pendant-detail.webp
+
+----------------------------------------------------------------------
+[ P16 ]
+الاسم:      سلسلة ذهب بميدالية وحجر
+التصنيف:    سلاسل وعقود
+السعر:      4026.5
+SKU:        N-18Y-1000-16
+الوزن:      10 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بميدالية وحجر - عيار 18 - وزن تقريبي 10 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-woman-medallion.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-medallion-gemstone-2k.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-medallion-gemstone.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-multi-gem.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-3.webp
+
+----------------------------------------------------------------------
+[ P17 ]
+الاسم:      سلسلة ذهب بحبات الفيروز
+التصنيف:    سلاسل وعقود
+السعر:      3623.85
+SKU:        N-18Y-0900-17
+الوزن:      9 جم
+الكمية:     1
+الوصف:
+سلسلة ذهب بحبات الفيروز - عيار 18 - وزن تقريبي 9 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (7) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-woman-turquoise.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-bead-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-bead-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-center.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-1.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-2.webp
+  7. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-3.webp
+
+----------------------------------------------------------------------
+[ P18 ]
+الاسم:      خاتم ذهب بتصميم ملتوٍ
+التصنيف:    خواتم
+السعر:      2352.15
+SKU:        R-21Y-0500-18
+الوزن:      5 جم
+الكمية:     1
+الوصف:
+خاتم ذهب بتصميم ملتوٍ - عيار 21 - وزن تقريبي 5 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-twisted-band.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-twisted-texture.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-texture-detail.webp
+
+----------------------------------------------------------------------
+[ P19 ]
+الاسم:      خاتم ذهب مفتوح
+التصنيف:    خواتم
+السعر:      2352.15
+SKU:        R-21Y-0500-19
+الوزن:      5 جم
+الكمية:     1
+الوصف:
+خاتم ذهب مفتوح - عيار 21 - وزن تقريبي 5 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-ring-travertine.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-open-ring-texture.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-bypass-detail.webp
+
+----------------------------------------------------------------------
+[ P20 ]
+الاسم:      خاتم ذهب بتصميم سلسلة
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-20
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب بتصميم سلسلة - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-chain-design-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-chain-design-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-integrated-chain.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ref-1.webp
+
+----------------------------------------------------------------------
+[ P21 ]
+الاسم:      خاتم ذهب بحلقات متصلة
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-21
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب بحلقات متصلة - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-chain-design-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-chain-design-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-yellow-band.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ref-1.webp
+
+----------------------------------------------------------------------
+[ P22 ]
+الاسم:      خاتم ذهب مفرّغ
+التصنيف:    خواتم
+السعر:      2352.15
+SKU:        R-21Y-0500-22
+الوزن:      5 جم
+الكمية:     1
+الوصف:
+خاتم ذهب مفرّغ - عيار 21 - وزن تقريبي 5 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (6) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-woman-hand.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-on-linen-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-on-linen-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-openwork-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-openwork-2.webp
+  6. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ref-1.webp
+
+----------------------------------------------------------------------
+[ P23 ]
+الاسم:      خاتم ذهب عريض
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-23
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب عريض - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-yellow-band-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-yellow-band-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ref-1.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-band-detail.webp
+
+----------------------------------------------------------------------
+[ P24 ]
+الاسم:      خاتم ذهب مجدول
+التصنيف:    خواتم
+السعر:      2352.15
+SKU:        R-21Y-0500-24
+الوزن:      5 جم
+الكمية:     1
+الوصف:
+خاتم ذهب مجدول - عيار 21 - وزن تقريبي 5 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-twisted-travertine.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-torsade-1.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-wirework.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ref-1.webp
+
+----------------------------------------------------------------------
+[ P25 ]
+الاسم:      خاتم ذهب بنقشة إغريقية
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-25
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب بنقشة إغريقية - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-1.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-2.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-pattern.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ref-1.webp
+
+----------------------------------------------------------------------
+[ P26 ]
+الاسم:      خاتم ذهب هندسي
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-26
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب هندسي - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-on-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-geometric.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-solid-band.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ref-1.webp
+
+----------------------------------------------------------------------
+[ P27 ]
+الاسم:      خاتم ذهب بحواف مزخرفة
+التصنيف:    خواتم
+السعر:      2822.58
+SKU:        R-21Y-0600-27
+الوزن:      6 جم
+الكمية:     1
+الوصف:
+خاتم ذهب بحواف مزخرفة - عيار 21 - وزن تقريبي 6 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (4) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-woman-ring.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-textured-crown.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-textured-edge.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ref-1.webp
+
+----------------------------------------------------------------------
+[ P28 ]
+الاسم:      إسورة ذهب بحبات وأحجار
+التصنيف:    أساور
+السعر:      6544.02
+SKU:        B-21Y-1400-28
+الوزن:      14 جم
+الكمية:     1
+الوصف:
+إسورة ذهب بحبات وأحجار - عيار 21 - وزن تقريبي 14 جم. السعر محسوب من سعر الجرام المباشر. (بيانات مبدئية تُحدّث لاحقاً)
+الصور (5) - الصف بالترتيب، الأولى غلاف:
+  1. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-woman-bracelet.webp
+  2. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-bead-linen.webp
+  3. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-bead-stone.webp
+  4. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-pave-diamonds.webp
+  5. https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ref-1.webp
+
+======================================================================
+تم: 28 منتج جاهز للصق.
