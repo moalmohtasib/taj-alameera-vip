@@ -11,6 +11,8 @@
    Default mode = DRY_RUN (computes + prints, writes NOTHING to Salla).
    ========================================================================== */
 "use strict";
+const fs = require("fs");
+const path = require("path");
 
 /* ------------------------------------------------------------------ CONFIG */
 const CONFIG = {
@@ -50,12 +52,28 @@ const CONFIG = {
    - weight:   grams (number).
    - making:   { type: "per_gram" | "fixed", value: SAR }.
    - stones:   optional flat SAR added on top (diamonds etc). Default 0.
-   Products with id:null are SKIPPED (data not in Salla yet). */
-const PRODUCTS = [
-  // EXAMPLE (delete once real data in):
-  // { id: 123456, name: "خاتم عيار 21", karat: "21k", weight: 5.20,
-  //   making: { type: "per_gram", value: 35 }, stones: 0 },
-];
+   Products with id:null are SKIPPED (data not in Salla yet).
+
+   AUTO-LOADED from seed-products.json + salla-id-map.json (written by
+   salla-create-products.js). Each seed entry is joined to its Salla id via
+   the folder number. Products not yet created (no map entry) get id:null and
+   are skipped. To override with a hand-edited list, set PRODUCTS below. */
+function loadProducts() {
+  let seed = [], map = {};
+  try { seed = JSON.parse(fs.readFileSync(path.join(__dirname, "seed-products.json"), "utf8")); }
+  catch { return []; }
+  try { map = JSON.parse(fs.readFileSync(path.join(__dirname, "salla-id-map.json"), "utf8")); }
+  catch { map = {}; }
+  return seed.map((p) => ({
+    id: map[p.folder] != null ? map[p.folder] : null,
+    name: p.name,
+    karat: p.karat,
+    weight: p.weight,
+    making: p.making,
+    stones: p.stones || 0
+  }));
+}
+const PRODUCTS = loadProducts();
 
 /* ----------------------------------------------------------------- HELPERS */
 function log(...a) { console.log(...a); }

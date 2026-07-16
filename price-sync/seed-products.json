@@ -1,0 +1,742 @@
+[
+  {
+    "folder": 1,
+    "name": "إسورة ذهب فاخرة",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 12,
+    "making": {
+      "type": "per_gram",
+      "value": 40
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "B-21Y-1200-1",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-model-hand.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-model-hand.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-jewelry-set.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-band-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ai-cuff-bracelet.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p1-ref-4.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 2,
+    "name": "إسورة ذهب بحبات البرسيم",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 14,
+    "making": {
+      "type": "per_gram",
+      "value": 40
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "B-21Y-1400-2",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-woman-cuff.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-woman-cuff.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-cuff-on-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-cuff-travertine.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p2-ai-clover-bead-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 3,
+    "name": "إسورة كف ذهب بلونين",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 18,
+    "making": {
+      "type": "per_gram",
+      "value": 42
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "B-21Y-1800-3",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-model-cuff.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-model-cuff.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ai-twotone-cuff-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p3-ref-3.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 4,
+    "name": "إسورة ذهب بحبات مزخرفة",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 13,
+    "making": {
+      "type": "per_gram",
+      "value": 40
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "B-21Y-1300-4",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-hand-bracelet.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-hand-bracelet.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-travertine.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p4-ai-beaded-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 5,
+    "name": "طقم ذهب فيليغرين (إسورة وخاتم)",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 16,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "S-21Y-1600-5",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-woman-set.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-woman-set.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-set-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-set-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p5-ai-filigree-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 6,
+    "name": "طقم ذهب بنقشة سداسية (إسورة وخاتم)",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 17,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "S-21Y-1700-6",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-woman-set.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-woman-set.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-set-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-set-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ref-4.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p6-ai-hexmesh-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 7,
+    "name": "طقم ذهب بنقشة المسمار (إسورة وخاتم)",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 19,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "S-21Y-1900-7",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-woman-set.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-woman-set.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-set-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-set-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ai-screw-motif.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-4.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-5.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p7-ref-6.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 8,
+    "name": "إسورة ذهب مجدولة بلونين",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 15,
+    "making": {
+      "type": "per_gram",
+      "value": 42
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "B-21Y-1500-8",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-woman-braided.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-woman-braided.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-twotone-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-twotone-stone.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p8-ai-braided-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 9,
+    "name": "طقم ذهب بتصميم ملفوف (إسورة وخاتم)",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 16,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "S-21Y-1600-9",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-woman-coiled-bracelet.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-woman-coiled-bracelet.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-woman-set.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-set-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-ring-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-ring-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-stretching.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-4.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-5.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-6.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-7.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ref-8.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p9-ai-coiled-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 10,
+    "name": "سلسلة ذهب بتعليقة بيضاوية",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 8,
+    "making": {
+      "type": "per_gram",
+      "value": 35
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "N-18Y-0800-10",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-woman-pendant.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-woman-pendant.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-necklace-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-oval-pendant.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p10-ai-pendant-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 11,
+    "name": "سلسلة ذهب بتعليقات ألماس",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 7,
+    "making": {
+      "type": "per_gram",
+      "value": 38
+    },
+    "stones": 0,
+    "hasStones": true,
+    "sku": "N-18Y-0700-11",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-woman-pendant.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-woman-pendant.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-diamond-pendants.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-necklace-drops.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ai-necklace-silk.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p11-ref-3.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 12,
+    "name": "سلسلة ذهب بحبات وتعليقات",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 9,
+    "making": {
+      "type": "per_gram",
+      "value": 35
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "N-18Y-0900-12",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-woman-necklace.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-woman-necklace.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-ball-chain-teardrop-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-ball-chain-teardrop-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-bead-chain-charms.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ai-multi-charm-stone.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p12-ref-2.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 13,
+    "name": "سلسلة ذهب بلونين",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 8,
+    "making": {
+      "type": "per_gram",
+      "value": 36
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "N-18Y-0800-13",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-woman-necklace.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-woman-necklace.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-gold-white-chain.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ai-two-tone-chain-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p13-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 14,
+    "name": "سلسلة ذهب ناعمة بسيطة",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 35
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "N-18Y-0600-14",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-woman-necklace.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-woman-necklace.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-necklace-travertine.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-minimalist-necklace.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p14-ai-bead-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 15,
+    "name": "سلسلة ذهب بتعليقة حجر كريم",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 9,
+    "making": {
+      "type": "per_gram",
+      "value": 38
+    },
+    "stones": 0,
+    "hasStones": true,
+    "sku": "N-18Y-0900-15",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-woman-necklace.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-woman-necklace.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-chain-gemstone.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-gemstone-pendant.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ref-3.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p15-ai-fan-pendant-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 16,
+    "name": "سلسلة ذهب بميدالية وحجر",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 10,
+    "making": {
+      "type": "per_gram",
+      "value": 38
+    },
+    "stones": 0,
+    "hasStones": true,
+    "sku": "N-18Y-1000-16",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-woman-medallion.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-woman-medallion.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-medallion-gemstone-2k.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-medallion-gemstone.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ai-multi-gem.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p16-ref-3.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 17,
+    "name": "سلسلة ذهب بحبات الفيروز",
+    "category_id": 1632733467,
+    "category_ar": "سلاسل",
+    "karat": "18k",
+    "weight": 9,
+    "making": {
+      "type": "per_gram",
+      "value": 38
+    },
+    "stones": 0,
+    "hasStones": true,
+    "sku": "N-18Y-0900-17",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-woman-turquoise.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-woman-turquoise.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-bead-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-bead-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ai-turquoise-center.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p17-ref-3.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 18,
+    "name": "خاتم ذهب بتصميم ملتوٍ",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 5,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0500-18",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-twisted-band.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-twisted-texture.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p18-ai-texture-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 19,
+    "name": "خاتم ذهب مفتوح",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 5,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0500-19",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-ring-travertine.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-open-ring-texture.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p19-ai-bypass-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 20,
+    "name": "خاتم ذهب بتصميم سلسلة",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-20",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-chain-design-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-chain-design-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ai-integrated-chain.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p20-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 21,
+    "name": "خاتم ذهب بحلقات متصلة",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-21",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-chain-design-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-chain-design-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ai-yellow-band.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p21-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 22,
+    "name": "خاتم ذهب مفرّغ",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 5,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0500-22",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-woman-hand.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-woman-hand.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-on-linen-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-on-linen-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-openwork-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ai-openwork-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p22-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 23,
+    "name": "خاتم ذهب عريض",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-23",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-yellow-band-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-yellow-band-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ref-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p23-ai-band-detail.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 24,
+    "name": "خاتم ذهب مجدول",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 5,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0500-24",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-twisted-travertine.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-torsade-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ai-wirework.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p24-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 25,
+    "name": "خاتم ذهب بنقشة إغريقية",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-25",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-1.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-2.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ai-greek-key-pattern.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p25-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 26,
+    "name": "خاتم ذهب هندسي",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-26",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-on-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-geometric.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ai-solid-band.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p26-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 27,
+    "name": "خاتم ذهب بحواف مزخرفة",
+    "category_id": 1807821848,
+    "category_ar": "خواتم",
+    "karat": "21k",
+    "weight": 6,
+    "making": {
+      "type": "per_gram",
+      "value": 45
+    },
+    "stones": 0,
+    "hasStones": false,
+    "sku": "R-21Y-0600-27",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-woman-ring.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-woman-ring.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-textured-crown.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ai-textured-edge.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p27-ref-1.webp"
+    ],
+    "placeholder": true
+  },
+  {
+    "folder": 28,
+    "name": "إسورة ذهب بحبات وأحجار",
+    "category_id": 395012634,
+    "category_ar": "أساور",
+    "karat": "21k",
+    "weight": 14,
+    "making": {
+      "type": "per_gram",
+      "value": 42
+    },
+    "stones": 0,
+    "hasStones": true,
+    "sku": "B-21Y-1400-28",
+    "quantity": 1,
+    "hero": "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-woman-bracelet.webp",
+    "gallery": [
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-woman-bracelet.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-bead-linen.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-bead-stone.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ai-pave-diamonds.webp",
+      "https://cdn.jsdelivr.net/gh/moalmohtasib/taj-alameera-vip@master/products/_web/p28-ref-1.webp"
+    ],
+    "placeholder": true
+  }
+]
